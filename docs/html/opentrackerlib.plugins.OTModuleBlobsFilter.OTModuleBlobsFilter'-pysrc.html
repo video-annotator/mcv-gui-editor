@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="core-module.html">Package&nbsp;core</a> ::
+        <a href="core.plugins-module.html">Package&nbsp;plugins</a> ::
+        <a href="core.plugins.OTModuleBlobsFilter-module.html">Package&nbsp;OTModuleBlobsFilter</a> ::
+        Module&nbsp;OTModuleBlobsFilter'
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter%27-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter%27-module.html">Module core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package core=core-module.html"><a title="core" class="py-name" href="#" onclick="return doclink('link-0', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package core.modules=core.modules-module.html"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-1', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Package core.modules.base=core.modules.base-module.html"><a title="core.modules.base" class="py-name" href="#" onclick="return doclink('link-2', 'base', 'link-2');">base</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Module core.modules.base.OTModulePlugin=core.modules.base.OTModulePlugin-module.html,Class core.modules.base.OTModulePlugin.OTModulePlugin=core.modules.base.OTModulePlugin.OTModulePlugin-class.html"><a title="core.modules.base.OTModulePlugin
+core.modules.base.OTModulePlugin.OTModulePlugin" class="py-name" href="#" onclick="return doclink('link-3', 'OTModulePlugin', 'link-3');">OTModulePlugin</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name"><a title="core.modules.base.OTModulePlugin
+core.modules.base.OTModulePlugin.OTModulePlugin" class="py-name" href="#" onclick="return doclink('link-4', 'OTModulePlugin', 'link-3');">OTModulePlugin</a></tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-5" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-5', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-6', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Package core.modules.formcontrols=core.modules.formcontrols-module.html"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-7', 'formcontrols', 'link-7');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Module core.modules.formcontrols.OTParamVideoInput=core.modules.formcontrols.OTParamVideoInput-module.html,Class core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput=core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput-class.html"><a title="core.modules.formcontrols.OTParamVideoInput
+core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput" class="py-name" href="#" onclick="return doclink('link-8', 'OTParamVideoInput', 'link-8');">OTParamVideoInput</a></tt> <tt class="py-keyword">import</tt> <tt id="link-9" class="py-name"><a title="core.modules.formcontrols.OTParamVideoInput
+core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput" class="py-name" href="#" onclick="return doclink('link-9', 'OTParamVideoInput', 'link-8');">OTParamVideoInput</a></tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-10" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-10', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-11', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-12', 'formcontrols', 'link-7');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Module core.modules.formcontrols.OTParamButton=core.modules.formcontrols.OTParamButton-module.html,Class core.modules.formcontrols.OTParamButton.OTParamButton=core.modules.formcontrols.OTParamButton.OTParamButton-class.html"><a title="core.modules.formcontrols.OTParamButton
+core.modules.formcontrols.OTParamButton.OTParamButton" class="py-name" href="#" onclick="return doclink('link-13', 'OTParamButton', 'link-13');">OTParamButton</a></tt> <tt class="py-keyword">import</tt> <tt id="link-14" class="py-name"><a title="core.modules.formcontrols.OTParamButton
+core.modules.formcontrols.OTParamButton.OTParamButton" class="py-name" href="#" onclick="return doclink('link-14', 'OTParamButton', 'link-13');">OTParamButton</a></tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-15" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-15', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-16', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-17', 'formcontrols', 'link-7');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Module core.modules.formcontrols.OTParamBackground=core.modules.formcontrols.OTParamBackground-module.html,Class core.modules.formcontrols.OTParamBackground.OTParamBackground=core.modules.formcontrols.OTParamBackground.OTParamBackground-class.html"><a title="core.modules.formcontrols.OTParamBackground
+core.modules.formcontrols.OTParamBackground.OTParamBackground" class="py-name" href="#" onclick="return doclink('link-18', 'OTParamBackground', 'link-18');">OTParamBackground</a></tt> <tt class="py-keyword">import</tt> <tt id="link-19" class="py-name"><a title="core.modules.formcontrols.OTParamBackground
+core.modules.formcontrols.OTParamBackground.OTParamBackground" class="py-name" href="#" onclick="return doclink('link-19', 'OTParamBackground', 'link-18');">OTParamBackground</a></tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-20" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-20', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-21', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-22', 'formcontrols', 'link-7');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Module core.modules.formcontrols.OTParamSlider=core.modules.formcontrols.OTParamSlider-module.html,Class core.modules.formcontrols.OTParamSlider.OTParamSlider=core.modules.formcontrols.OTParamSlider.OTParamSlider-class.html"><a title="core.modules.formcontrols.OTParamSlider
+core.modules.formcontrols.OTParamSlider.OTParamSlider" class="py-name" href="#" onclick="return doclink('link-23', 'OTParamSlider', 'link-23');">OTParamSlider</a></tt> <tt class="py-keyword">import</tt> <tt id="link-24" class="py-name"><a title="core.modules.formcontrols.OTParamSlider
+core.modules.formcontrols.OTParamSlider.OTParamSlider" class="py-name" href="#" onclick="return doclink('link-24', 'OTParamSlider', 'link-23');">OTParamSlider</a></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-25" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-25', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-26', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-27', 'formcontrols', 'link-7');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name" targets="Module core.modules.formcontrols.OTParamPlayer=core.modules.formcontrols.OTParamPlayer-module.html,Class core.modules.formcontrols.OTParamPlayer.OTParamPlayer=core.modules.formcontrols.OTParamPlayer.OTParamPlayer-class.html"><a title="core.modules.formcontrols.OTParamPlayer
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer" class="py-name" href="#" onclick="return doclink('link-28', 'OTParamPlayer', 'link-28');">OTParamPlayer</a></tt> <tt class="py-keyword">import</tt> <tt id="link-29" class="py-name"><a title="core.modules.formcontrols.OTParamPlayer
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer" class="py-name" href="#" onclick="return doclink('link-29', 'OTParamPlayer', 'link-28');">OTParamPlayer</a></tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-30" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-30', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-31', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-32', 'formcontrols', 'link-7');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Module core.modules.formcontrols.OTParamCheckBox=core.modules.formcontrols.OTParamCheckBox-module.html,Class core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox=core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox-class.html"><a title="core.modules.formcontrols.OTParamCheckBox
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox" class="py-name" href="#" onclick="return doclink('link-33', 'OTParamCheckBox', 'link-33');">OTParamCheckBox</a></tt> <tt class="py-keyword">import</tt> <tt id="link-34" class="py-name"><a title="core.modules.formcontrols.OTParamCheckBox
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox" class="py-name" href="#" onclick="return doclink('link-34', 'OTParamCheckBox', 'link-33');">OTParamCheckBox</a></tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-35" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-35', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-36', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-37', 'formcontrols', 'link-7');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Module core.modules.formcontrols.OTParamProgress=core.modules.formcontrols.OTParamProgress-module.html,Class core.modules.formcontrols.OTParamProgress.OTParamProgress=core.modules.formcontrols.OTParamProgress.OTParamProgress-class.html"><a title="core.modules.formcontrols.OTParamProgress
+core.modules.formcontrols.OTParamProgress.OTParamProgress" class="py-name" href="#" onclick="return doclink('link-38', 'OTParamProgress', 'link-38');">OTParamProgress</a></tt> <tt class="py-keyword">import</tt> <tt id="link-39" class="py-name"><a title="core.modules.formcontrols.OTParamProgress
+core.modules.formcontrols.OTParamProgress.OTParamProgress" class="py-name" href="#" onclick="return doclink('link-39', 'OTParamProgress', 'link-38');">OTParamProgress</a></tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-40" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-40', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-41" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-41', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-42', 'formcontrols', 'link-7');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-43" class="py-name" targets="Module core.modules.formcontrols.OTParamCombo=core.modules.formcontrols.OTParamCombo-module.html,Class core.modules.formcontrols.OTParamCombo.OTParamCombo=core.modules.formcontrols.OTParamCombo.OTParamCombo-class.html"><a title="core.modules.formcontrols.OTParamCombo
+core.modules.formcontrols.OTParamCombo.OTParamCombo" class="py-name" href="#" onclick="return doclink('link-43', 'OTParamCombo', 'link-43');">OTParamCombo</a></tt> <tt class="py-keyword">import</tt> <tt id="link-44" class="py-name"><a title="core.modules.formcontrols.OTParamCombo
+core.modules.formcontrols.OTParamCombo.OTParamCombo" class="py-name" href="#" onclick="return doclink('link-44', 'OTParamCombo', 'link-43');">OTParamCombo</a></tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-45" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-45', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-46', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-47" class="py-name"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-47', 'formcontrols', 'link-7');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-48" class="py-name" targets="Module core.modules.formcontrols.OTParamText=core.modules.formcontrols.OTParamText-module.html,Class core.modules.formcontrols.OTParamText.OTParamText=core.modules.formcontrols.OTParamText.OTParamText-class.html"><a title="core.modules.formcontrols.OTParamText
+core.modules.formcontrols.OTParamText.OTParamText" class="py-name" href="#" onclick="return doclink('link-48', 'OTParamText', 'link-48');">OTParamText</a></tt> <tt class="py-keyword">import</tt> <tt id="link-49" class="py-name"><a title="core.modules.formcontrols.OTParamText
+core.modules.formcontrols.OTParamText.OTParamText" class="py-name" href="#" onclick="return doclink('link-49', 'OTParamText', 'link-48');">OTParamText</a></tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-50" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-50', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-51" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-51', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-52" class="py-name"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-52', 'formcontrols', 'link-7');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-53" class="py-name" targets="Module core.modules.formcontrols.OTParamGeometry=core.modules.formcontrols.OTParamGeometry-module.html,Class core.modules.formcontrols.OTParamGeometry.OTParamGeometry=core.modules.formcontrols.OTParamGeometry.OTParamGeometry-class.html"><a title="core.modules.formcontrols.OTParamGeometry
+core.modules.formcontrols.OTParamGeometry.OTParamGeometry" class="py-name" href="#" onclick="return doclink('link-53', 'OTParamGeometry', 'link-53');">OTParamGeometry</a></tt> <tt class="py-keyword">import</tt> <tt id="link-54" class="py-name"><a title="core.modules.formcontrols.OTParamGeometry
+core.modules.formcontrols.OTParamGeometry.OTParamGeometry" class="py-name" href="#" onclick="return doclink('link-54', 'OTParamGeometry', 'link-53');">OTParamGeometry</a></tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-55" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-55', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-56" class="py-name" targets="Package core.utils=core.utils-module.html"><a title="core.utils" class="py-name" href="#" onclick="return doclink('link-56', 'utils', 'link-56');">utils</a></tt><tt class="py-op">.</tt><tt id="link-57" class="py-name" targets="Module core.utils.tools=core.utils.tools-module.html"><a title="core.utils.tools" class="py-name" href="#" onclick="return doclink('link-57', 'tools', 'link-57');">tools</a></tt> <tt class="py-keyword">as</tt> <tt id="link-58" class="py-name"><a title="core.utils.tools" class="py-name" href="#" onclick="return doclink('link-58', 'tools', 'link-57');">tools</a></tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-59" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-59', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-60" class="py-name"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-60', 'modules', 'link-1');">modules</a></tt><tt class="py-op">.</tt><tt id="link-61" class="py-name" targets="Package core.modules.modulestypes=core.modules.modulestypes-module.html"><a title="core.modules.modulestypes" class="py-name" href="#" onclick="return doclink('link-61', 'modulestypes', 'link-61');">modulestypes</a></tt><tt class="py-op">.</tt><tt id="link-62" class="py-name" targets="Module core.modules.modulestypes.OTModulePositions=core.modules.modulestypes.OTModulePositions-module.html,Class core.modules.modulestypes.OTModulePositions.OTModulePositions=core.modules.modulestypes.OTModulePositions.OTModulePositions-class.html"><a title="core.modules.modulestypes.OTModulePositions
+core.modules.modulestypes.OTModulePositions.OTModulePositions" class="py-name" href="#" onclick="return doclink('link-62', 'OTModulePositions', 'link-62');">OTModulePositions</a></tt> <tt class="py-keyword">import</tt> <tt id="link-63" class="py-name"><a title="core.modules.modulestypes.OTModulePositions
+core.modules.modulestypes.OTModulePositions.OTModulePositions" class="py-name" href="#" onclick="return doclink('link-63', 'OTModulePositions', 'link-62');">OTModulePositions</a></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">PyQt4</tt><tt class="py-op">.</tt><tt class="py-name">QtCore</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">PyQt4</tt><tt class="py-op">.</tt><tt class="py-name">QtGui</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment">#from PyQt4 import QtSql</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">numpy</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">math</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">cv2</tt><tt class="py-op">,</tt> <tt class="py-name">os</tt><tt class="py-op">,</tt> <tt class="py-name">time</tt><tt class="py-op">,</tt> <tt class="py-name">itertools</tt><tt class="py-op">,</tt> <tt class="py-name">shutil</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-64" class="py-name" targets="Module core.plugins.OTModuleBlobsFilter.OTPThreshBlobs=core.plugins.OTModuleBlobsFilter.OTPThreshBlobs-module.html,Class core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs=core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs-class.html"><a title="core.plugins.OTModuleBlobsFilter.OTPThreshBlobs
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs" class="py-name" href="#" onclick="return doclink('link-64', 'OTPThreshBlobs', 'link-64');">OTPThreshBlobs</a></tt> <tt class="py-keyword">import</tt> <tt id="link-65" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPThreshBlobs
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs" class="py-name" href="#" onclick="return doclink('link-65', 'OTPThreshBlobs', 'link-64');">OTPThreshBlobs</a></tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-66" class="py-name" targets="Module core.plugins.OTModuleBlobsFilter.OTPThreshImage=core.plugins.OTModuleBlobsFilter.OTPThreshImage-module.html,Class core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage=core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage-class.html"><a title="core.plugins.OTModuleBlobsFilter.OTPThreshImage
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage" class="py-name" href="#" onclick="return doclink('link-66', 'OTPThreshImage', 'link-66');">OTPThreshImage</a></tt> <tt class="py-keyword">import</tt> <tt id="link-67" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPThreshImage
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage" class="py-name" href="#" onclick="return doclink('link-67', 'OTPThreshImage', 'link-66');">OTPThreshImage</a></tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-68" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-68', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-69" class="py-name" targets="Package core.plugins=core.plugins-module.html"><a title="core.plugins" class="py-name" href="#" onclick="return doclink('link-69', 'plugins', 'link-69');">plugins</a></tt><tt class="py-op">.</tt><tt id="link-70" class="py-name" targets="Package core.plugins.OTModuleColorFilter=core.plugins.OTModuleColorFilter-module.html,Class core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter=core.plugins.OTModuleColorFilter.OTModuleColorFilter%27.OTModuleColorFilter-class.html"><a title="core.plugins.OTModuleColorFilter
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter" class="py-name" href="#" onclick="return doclink('link-70', 'OTModuleColorFilter', 'link-70');">OTModuleColorFilter</a></tt><tt class="py-op">.</tt><tt id="link-71" class="py-name"><a title="core.plugins.OTModuleColorFilter
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter" class="py-name" href="#" onclick="return doclink('link-71', 'OTModuleColorFilter', 'link-70');">OTModuleColorFilter</a></tt> <tt class="py-keyword">import</tt> <tt id="link-72" class="py-name"><a title="core.plugins.OTModuleColorFilter
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter" class="py-name" href="#" onclick="return doclink('link-72', 'OTModuleColorFilter', 'link-70');">OTModuleColorFilter</a></tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="OTModuleBlobsFilter"></a><div id="OTModuleBlobsFilter-def"><a name="L31"></a><tt class="py-lineno"> 31</tt> <a class="py-toggle" href="#" id="OTModuleBlobsFilter-toggle" onclick="return toggle('OTModuleBlobsFilter');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter-class.html">OTModuleBlobsFilter</a><tt class="py-op">(</tt><tt class="py-base-class">OTModulePlugin</tt><tt class="py-op">,</tt><tt class="py-base-class">OTModulePositions</tt><tt class="py-op">,</tt> <tt class="py-base-class">OTPThreshBlobs</tt><tt class="py-op">,</tt> <tt class="py-base-class">OTPThreshImage</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTModuleBlobsFilter-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="OTModuleBlobsFilter-expanded"><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">     </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"> </tt>
+<a name="OTModuleBlobsFilter.__init__"></a><div id="OTModuleBlobsFilter.__init__-def"><a name="L34"></a><tt class="py-lineno"> 34</tt> <a class="py-toggle" href="#" id="OTModuleBlobsFilter.__init__-toggle" onclick="return toggle('OTModuleBlobsFilter.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTModuleBlobsFilter.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTModuleBlobsFilter.__init__-expanded"><a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-name">icon_path</tt> <tt class="py-op">=</tt> <tt id="link-73" class="py-name"><a title="core.utils.tools" class="py-name" href="#" onclick="return doclink('link-73', 'tools', 'link-57');">tools</a></tt><tt class="py-op">.</tt><tt id="link-74" class="py-name" targets="Function core.utils.tools.getFileInSameDirectory()=core.utils.tools-module.html#getFileInSameDirectory"><a title="core.utils.tools.getFileInSameDirectory" class="py-name" href="#" onclick="return doclink('link-74', 'getFileInSameDirectory', 'link-74');">getFileInSameDirectory</a></tt><tt class="py-op">(</tt><tt class="py-name">__file__</tt><tt class="py-op">,</tt> <tt class="py-string">'iconsubbg.jpg'</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt id="link-75" class="py-name"><a title="core.modules.base.OTModulePlugin
+core.modules.base.OTModulePlugin.OTModulePlugin" class="py-name" href="#" onclick="return doclink('link-75', 'OTModulePlugin', 'link-3');">OTModulePlugin</a></tt><tt class="py-op">.</tt><tt id="link-76" class="py-name" targets="Method core.controllers.OTModulesController.OTModulesController.__init__()=core.controllers.OTModulesController.OTModulesController-class.html#__init__,Method core.controllers.OTPBase.OTPBase.__init__()=core.controllers.OTPBase.OTPBase-class.html#__init__,Method core.controllers.OTProjectViewer.OTProjectViewer.__init__()=core.controllers.OTProjectViewer.OTProjectViewer-class.html#__init__,Method core.controllers.OTProjectViewerModulesListWidget.OTProjectViewerModulesListWidget.__init__()=core.controllers.OTProjectViewerModulesListWidget.OTProjectViewerModulesListWidget-class.html#__init__,Method core.datatypes.video.OTVideoInput.OTVideoInput.__init__()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#__init__,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.__init__()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#__init__,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.__init__()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#__init__,Method core.datatypes.video.OTVideoInputMask.OTVideoInputMask.__init__()=core.datatypes.video.OTVideoInputMask.OTVideoInputMask-class.html#__init__,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.__init__()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#__init__,Method core.datatypes.video.OTVideoMask.OTVideoMask.__init__()=core.datatypes.video.OTVideoMask.OTVideoMask-class.html#__init__,Method core.modules.base.OTModule.OTModule.__init__()=core.modules.base.OTModule.OTModule-class.html#__init__,Method core.modules.base.OTModuleAutoForm.OTModuleAutoForm.__init__()=core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#__init__,Method core.modules.base.OTModulePlugin.OTModulePlugin.__init__()=core.modules.base.OTModulePlugin.OTModulePlugin-class.html#__init__,Method core.modules.base.OTModuleProject.OTModuleProject.__init__()=core.modules.base.OTModuleProject.OTModuleProject-class.html#__init__,Method core.modules.base.OTModuleProjectItem.OTModuleProjectItem.__init__()=core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html#__init__,Method core.modules.formcontrols.OTControlBase.OTControlBase.__init__()=core.modules.formcontrols.OTControlBase.OTControlBase-class.html#__init__,Method core.modules.formcontrols.OTParamArenas.OTParamArenas.__init__()=core.modules.formcontrols.OTParamArenas.OTParamArenas-class.html#__init__,Method core.modules.formcontrols.OTParamBackground.OTParamBackground.__init__()=core.modules.formcontrols.OTParamBackground.OTParamBackground-class.html#__init__,Method core.modules.formcontrols.OTParamBase.OTParamBase.__init__()=core.modules.formcontrols.OTParamBase.OTParamBase-class.html#__init__,Method core.modules.formcontrols.OTParamDBQuery.SelectedCellDelegate.__init__()=core.modules.formcontrols.OTParamDBQuery.SelectedCellDelegate-class.html#__init__,Method core.modules.formcontrols.OTParamGeometry.OTParamGeometry.__init__()=core.modules.formcontrols.OTParamGeometry.OTParamGeometry-class.html#__init__,Method core.modules.formcontrols.OTParamImage.ImageGLWidget.__init__()=core.modules.formcontrols.OTParamImage.ImageGLWidget-class.html#__init__,Method core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.__init__()=core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection-class.html#__init__,Method core.modules.formcontrols.OTParamPlayer.VideoGLWidget.__init__()=core.modules.formcontrols.OTParamPlayer.VideoGLWidget-class.html#__init__,Method core.modules.formcontrols.OTParamPositions.OTParamPositions.__init__()=core.modules.formcontrols.OTParamPositions.OTParamPositions-class.html#__init__,Method core.modules.formcontrols.OTParamProgress.OTParamProgress.__init__()=core.modules.formcontrols.OTParamProgress.OTParamProgress-class.html#__init__,Method core.modules.formcontrols.OTParamResults.OTParamResults.__init__()=core.modules.formcontrols.OTParamResults.OTParamResults-class.html#__init__,Method core.modules.formcontrols.OTParamSlider.OTParamSlider.__init__()=core.modules.formcontrols.OTParamSlider.OTParamSlider-class.html#__init__,Method core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput.__init__()=core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput-class.html#__init__,Method core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.__init__()=core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#__init__,Method core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector.__init__()=core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector-class.html#__init__,Method core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.__init__()=core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc%27.OTModuleBackgroundCalc-class.html#__init__,Method core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.__init__()=core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector-class.html#__init__,Method core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.__init__()=core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.__init__()=core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter%27.OTModuleBlobsFilter-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.__init__()=core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.__init__()=core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.__init__()=core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.__init__()=core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__()=core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.__init__()=core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.__init__()=core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage-class.html#__init__,Method core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.EnergeticObject.__init__()=core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions%27.EnergeticObject-class.html#__init__,Method core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.__init__()=core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions%27.OTModuleClusterObjectsPositions-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.__init__()=core.plugins.OTModuleColorFilter.OTModuleColorFilter%27.OTModuleColorFilter-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.__init__()=core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.__init__()=core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.__init__()=core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.__init__()=core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.__init__()=core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.__init__()=core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.__init__()=core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__()=core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#__init__,Method core.plugins.OTModuleGeometry.OTModuleGeometry'.OTModuleGeometry.__init__()=core.plugins.OTModuleGeometry.OTModuleGeometry%27.OTModuleGeometry-class.html#__init__,Method core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry.__init__()=core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry-class.html#__init__,Method core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.__init__()=core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry%27.OTModuleMaskFromGeometry-class.html#__init__,Method core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.__init__()=core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry-class.html#__init__,Method core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin'.OTModuleResultsPlugin.__init__()=core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.__init__()=core.plugins.OTModuleSubBackground.OTModuleSubBackground%27.OTModuleSubBackground-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur.__init__()=core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter.__init__()=core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs.__init__()=core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground.__init__()=core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__()=core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#__init__,Method core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo.__init__()=core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo-class.html#__init__,Method core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.__init__()=core.plugins.OTModuleVideoInput.OTModuleVideoInput%27.OTModuleVideoInput-class.html#__init__,Method core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.__init__()=core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo-class.html#__init__,Method core.utils.tools.RingBuffer.__init__()=core.utils.tools.RingBuffer-class.html#__init__"><a title="core.controllers.OTModulesController.OTModulesController.__init__
+core.controllers.OTPBase.OTPBase.__init__
+core.controllers.OTProjectViewer.OTProjectViewer.__init__
+core.controllers.OTProjectViewerModulesListWidget.OTProjectViewerModulesListWidget.__init__
+core.datatypes.video.OTVideoInput.OTVideoInput.__init__
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.__init__
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.__init__
+core.datatypes.video.OTVideoInputMask.OTVideoInputMask.__init__
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.__init__
+core.datatypes.video.OTVideoMask.OTVideoMask.__init__
+core.modules.base.OTModule.OTModule.__init__
+core.modules.base.OTModuleAutoForm.OTModuleAutoForm.__init__
+core.modules.base.OTModulePlugin.OTModulePlugin.__init__
+core.modules.base.OTModuleProject.OTModuleProject.__init__
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem.__init__
+core.modules.formcontrols.OTControlBase.OTControlBase.__init__
+core.modules.formcontrols.OTParamArenas.OTParamArenas.__init__
+core.modules.formcontrols.OTParamBackground.OTParamBackground.__init__
+core.modules.formcontrols.OTParamBase.OTParamBase.__init__
+core.modules.formcontrols.OTParamDBQuery.SelectedCellDelegate.__init__
+core.modules.formcontrols.OTParamGeometry.OTParamGeometry.__init__
+core.modules.formcontrols.OTParamImage.ImageGLWidget.__init__
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.__init__
+core.modules.formcontrols.OTParamPlayer.VideoGLWidget.__init__
+core.modules.formcontrols.OTParamPositions.OTParamPositions.__init__
+core.modules.formcontrols.OTParamProgress.OTParamProgress.__init__
+core.modules.formcontrols.OTParamResults.OTParamResults.__init__
+core.modules.formcontrols.OTParamSlider.OTParamSlider.__init__
+core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput.__init__
+core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.__init__
+core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector.__init__
+core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.__init__
+core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.__init__
+core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.__init__
+core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.__init__
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.EnergeticObject.__init__
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.__init__
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.__init__
+core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.__init__
+core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.__init__
+core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.__init__
+core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleGeometry.OTModuleGeometry'.OTModuleGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.__init__
+core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin'.OTModuleResultsPlugin.__init__
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.__init__
+core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo.__init__
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.__init__
+core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.__init__
+core.utils.tools.RingBuffer.__init__" class="py-name" href="#" onclick="return doclink('link-76', '__init__', 'link-76');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt id="link-77" class="py-name" targets="Variable core.modules.base.OTModule.OTModule.name=core.modules.base.OTModule.OTModule-class.html#name"><a title="core.modules.base.OTModule.OTModule.name" class="py-name" href="#" onclick="return doclink('link-77', 'name', 'link-77');">name</a></tt><tt class="py-op">,</tt>  <tt class="py-name">iconFile</tt><tt class="py-op">=</tt><tt class="py-name">icon_path</tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt id="link-78" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPThreshImage
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage" class="py-name" href="#" onclick="return doclink('link-78', 'OTPThreshImage', 'link-66');">OTPThreshImage</a></tt><tt class="py-op">.</tt><tt id="link-79" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController.__init__
+core.controllers.OTPBase.OTPBase.__init__
+core.controllers.OTProjectViewer.OTProjectViewer.__init__
+core.controllers.OTProjectViewerModulesListWidget.OTProjectViewerModulesListWidget.__init__
+core.datatypes.video.OTVideoInput.OTVideoInput.__init__
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.__init__
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.__init__
+core.datatypes.video.OTVideoInputMask.OTVideoInputMask.__init__
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.__init__
+core.datatypes.video.OTVideoMask.OTVideoMask.__init__
+core.modules.base.OTModule.OTModule.__init__
+core.modules.base.OTModuleAutoForm.OTModuleAutoForm.__init__
+core.modules.base.OTModulePlugin.OTModulePlugin.__init__
+core.modules.base.OTModuleProject.OTModuleProject.__init__
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem.__init__
+core.modules.formcontrols.OTControlBase.OTControlBase.__init__
+core.modules.formcontrols.OTParamArenas.OTParamArenas.__init__
+core.modules.formcontrols.OTParamBackground.OTParamBackground.__init__
+core.modules.formcontrols.OTParamBase.OTParamBase.__init__
+core.modules.formcontrols.OTParamDBQuery.SelectedCellDelegate.__init__
+core.modules.formcontrols.OTParamGeometry.OTParamGeometry.__init__
+core.modules.formcontrols.OTParamImage.ImageGLWidget.__init__
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.__init__
+core.modules.formcontrols.OTParamPlayer.VideoGLWidget.__init__
+core.modules.formcontrols.OTParamPositions.OTParamPositions.__init__
+core.modules.formcontrols.OTParamProgress.OTParamProgress.__init__
+core.modules.formcontrols.OTParamResults.OTParamResults.__init__
+core.modules.formcontrols.OTParamSlider.OTParamSlider.__init__
+core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput.__init__
+core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.__init__
+core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector.__init__
+core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.__init__
+core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.__init__
+core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.__init__
+core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.__init__
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.EnergeticObject.__init__
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.__init__
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.__init__
+core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.__init__
+core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.__init__
+core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.__init__
+core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleGeometry.OTModuleGeometry'.OTModuleGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.__init__
+core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin'.OTModuleResultsPlugin.__init__
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.__init__
+core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo.__init__
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.__init__
+core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.__init__
+core.utils.tools.RingBuffer.__init__" class="py-name" href="#" onclick="return doclink('link-79', '__init__', 'link-76');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt id="link-80" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPThreshBlobs
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs" class="py-name" href="#" onclick="return doclink('link-80', 'OTPThreshBlobs', 'link-64');">OTPThreshBlobs</a></tt><tt class="py-op">.</tt><tt id="link-81" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController.__init__
+core.controllers.OTPBase.OTPBase.__init__
+core.controllers.OTProjectViewer.OTProjectViewer.__init__
+core.controllers.OTProjectViewerModulesListWidget.OTProjectViewerModulesListWidget.__init__
+core.datatypes.video.OTVideoInput.OTVideoInput.__init__
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.__init__
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.__init__
+core.datatypes.video.OTVideoInputMask.OTVideoInputMask.__init__
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.__init__
+core.datatypes.video.OTVideoMask.OTVideoMask.__init__
+core.modules.base.OTModule.OTModule.__init__
+core.modules.base.OTModuleAutoForm.OTModuleAutoForm.__init__
+core.modules.base.OTModulePlugin.OTModulePlugin.__init__
+core.modules.base.OTModuleProject.OTModuleProject.__init__
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem.__init__
+core.modules.formcontrols.OTControlBase.OTControlBase.__init__
+core.modules.formcontrols.OTParamArenas.OTParamArenas.__init__
+core.modules.formcontrols.OTParamBackground.OTParamBackground.__init__
+core.modules.formcontrols.OTParamBase.OTParamBase.__init__
+core.modules.formcontrols.OTParamDBQuery.SelectedCellDelegate.__init__
+core.modules.formcontrols.OTParamGeometry.OTParamGeometry.__init__
+core.modules.formcontrols.OTParamImage.ImageGLWidget.__init__
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.__init__
+core.modules.formcontrols.OTParamPlayer.VideoGLWidget.__init__
+core.modules.formcontrols.OTParamPositions.OTParamPositions.__init__
+core.modules.formcontrols.OTParamProgress.OTParamProgress.__init__
+core.modules.formcontrols.OTParamResults.OTParamResults.__init__
+core.modules.formcontrols.OTParamSlider.OTParamSlider.__init__
+core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput.__init__
+core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.__init__
+core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector.__init__
+core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.__init__
+core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.__init__
+core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.__init__
+core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.__init__
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.EnergeticObject.__init__
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.__init__
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.__init__
+core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.__init__
+core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.__init__
+core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.__init__
+core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleGeometry.OTModuleGeometry'.OTModuleGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.__init__
+core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin'.OTModuleResultsPlugin.__init__
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.__init__
+core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo.__init__
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.__init__
+core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.__init__
+core.utils.tools.RingBuffer.__init__" class="py-name" href="#" onclick="return doclink('link-81', '__init__', 'link-76');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_video</tt> <tt class="py-op">=</tt> <tt id="link-82" class="py-name"><a title="core.modules.formcontrols.OTParamVideoInput
+core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput" class="py-name" href="#" onclick="return doclink('link-82', 'OTParamVideoInput', 'link-8');">OTParamVideoInput</a></tt><tt class="py-op">(</tt><tt class="py-string">"Video"</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_player</tt> <tt class="py-op">=</tt> <tt id="link-83" class="py-name"><a title="core.modules.formcontrols.OTParamPlayer
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer" class="py-name" href="#" onclick="return doclink('link-83', 'OTParamPlayer', 'link-28');">OTParamPlayer</a></tt><tt class="py-op">(</tt><tt class="py-string">"Video player"</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_polygons</tt> <tt class="py-op">=</tt> <tt id="link-84" class="py-name"><a title="core.modules.formcontrols.OTParamGeometry
+core.modules.formcontrols.OTParamGeometry.OTParamGeometry" class="py-name" href="#" onclick="return doclink('link-84', 'OTParamGeometry', 'link-53');">OTParamGeometry</a></tt><tt class="py-op">(</tt><tt class="py-string">"Geometry"</tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">         </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_blockSize</tt> <tt class="py-op">=</tt> <tt id="link-85" class="py-name"><a title="core.modules.formcontrols.OTParamSlider
+core.modules.formcontrols.OTParamSlider.OTParamSlider" class="py-name" href="#" onclick="return doclink('link-85', 'OTParamSlider', 'link-23');">OTParamSlider</a></tt><tt class="py-op">(</tt><tt class="py-string">"Block size"</tt><tt class="py-op">,</tt> <tt class="py-number">3</tt><tt class="py-op">,</tt> <tt class="py-number">3</tt><tt class="py-op">,</tt> <tt class="py-number">500</tt><tt class="py-op">,</tt><tt class="py-name">varname</tt><tt class="py-op">=</tt><tt class="py-string">'_param_tb_block_size'</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_C</tt> <tt class="py-op">=</tt> <tt id="link-86" class="py-name"><a title="core.modules.formcontrols.OTParamSlider
+core.modules.formcontrols.OTParamSlider.OTParamSlider" class="py-name" href="#" onclick="return doclink('link-86', 'OTParamSlider', 'link-23');">OTParamSlider</a></tt><tt class="py-op">(</tt><tt class="py-string">"C"</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">500</tt><tt class="py-op">,</tt><tt class="py-name">varname</tt><tt class="py-op">=</tt><tt class="py-string">'_param_tb_c'</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_boxWidth</tt> <tt class="py-op">=</tt> <tt id="link-87" class="py-name"><a title="core.modules.formcontrols.OTParamSlider
+core.modules.formcontrols.OTParamSlider.OTParamSlider" class="py-name" href="#" onclick="return doclink('link-87', 'OTParamSlider', 'link-23');">OTParamSlider</a></tt><tt class="py-op">(</tt><tt class="py-string">"Width"</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">30</tt><tt class="py-op">,</tt><tt class="py-name">varname</tt><tt class="py-op">=</tt><tt class="py-string">'_param_tb_box_width'</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_boxHeight</tt> <tt class="py-op">=</tt> <tt id="link-88" class="py-name"><a title="core.modules.formcontrols.OTParamSlider
+core.modules.formcontrols.OTParamSlider.OTParamSlider" class="py-name" href="#" onclick="return doclink('link-88', 'OTParamSlider', 'link-23');">OTParamSlider</a></tt><tt class="py-op">(</tt><tt class="py-string">"Height"</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">30</tt><tt class="py-op">,</tt><tt class="py-name">varname</tt><tt class="py-op">=</tt><tt class="py-string">'_param_tb_box_height'</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_adaptiveMethod</tt> <tt class="py-op">=</tt> <tt id="link-89" class="py-name"><a title="core.modules.formcontrols.OTParamCombo
+core.modules.formcontrols.OTParamCombo.OTParamCombo" class="py-name" href="#" onclick="return doclink('link-89', 'OTParamCombo', 'link-43');">OTParamCombo</a></tt><tt class="py-op">(</tt><tt class="py-string">"Adaptive method"</tt><tt class="py-op">,</tt><tt class="py-name">varname</tt><tt class="py-op">=</tt><tt class="py-string">'_param_tb_adaptive_method'</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_adaptiveMethod</tt><tt class="py-op">.</tt><tt id="link-90" class="py-name" targets="Method core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem()=core.modules.formcontrols.OTParamCombo.OTParamCombo-class.html#addItem"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-90', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"Mean"</tt><tt class="py-op">,</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">cv</tt><tt class="py-op">.</tt><tt class="py-name">CV_ADAPTIVE_THRESH_MEAN_C</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_adaptiveMethod</tt><tt class="py-op">.</tt><tt id="link-91" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-91', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"Gaussian"</tt><tt class="py-op">,</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">cv</tt><tt class="py-op">.</tt><tt class="py-name">CV_ADAPTIVE_THRESH_GAUSSIAN_C</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">         </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt> <tt class="py-op">=</tt> <tt id="link-92" class="py-name"><a title="core.modules.formcontrols.OTParamCombo
+core.modules.formcontrols.OTParamCombo.OTParamCombo" class="py-name" href="#" onclick="return doclink('link-92', 'OTParamCombo', 'link-43');">OTParamCombo</a></tt><tt class="py-op">(</tt><tt class="py-string">"Colors space"</tt><tt class="py-op">,</tt><tt class="py-name">varname</tt><tt class="py-op">=</tt><tt class="py-string">'_param_tb_color_domain'</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-93" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-93', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"RGB"</tt><tt class="py-op">,</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-94" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-94', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"Gray"</tt><tt class="py-op">,</tt>   <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">COLOR_BGR2GRAY</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-95" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-95', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"XYZ"</tt><tt class="py-op">,</tt>    <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">COLOR_BGR2XYZ</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-96" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-96', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"YCrCb"</tt><tt class="py-op">,</tt>  <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">COLOR_BGR2YCR_CB</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-97" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-97', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"HSV"</tt><tt class="py-op">,</tt>    <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">COLOR_BGR2HSV</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-98" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-98', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"HLS"</tt><tt class="py-op">,</tt>    <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">COLOR_BGR2HLS</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-99" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-99', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"Lab"</tt><tt class="py-op">,</tt>    <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">COLOR_BGR2LAB</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-100" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-100', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"Luv"</tt><tt class="py-op">,</tt>    <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">COLOR_BGR2LUV</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">         </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorComponent</tt> <tt class="py-op">=</tt> <tt id="link-101" class="py-name"><a title="core.modules.formcontrols.OTParamCombo
+core.modules.formcontrols.OTParamCombo.OTParamCombo" class="py-name" href="#" onclick="return doclink('link-101', 'OTParamCombo', 'link-43');">OTParamCombo</a></tt><tt class="py-op">(</tt><tt class="py-string">"Component"</tt><tt class="py-op">,</tt><tt class="py-name">varname</tt><tt class="py-op">=</tt><tt class="py-string">'_param_tb_color_component'</tt><tt class="py-op">)</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorComponent</tt><tt class="py-op">.</tt><tt id="link-102" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-102', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"A"</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorComponent</tt><tt class="py-op">.</tt><tt id="link-103" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-103', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"B"</tt><tt class="py-op">,</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorComponent</tt><tt class="py-op">.</tt><tt id="link-104" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.addItem" class="py-name" href="#" onclick="return doclink('link-104', 'addItem', 'link-90');">addItem</a></tt><tt class="py-op">(</tt><tt class="py-string">"C"</tt><tt class="py-op">,</tt> <tt class="py-number">2</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-105" class="py-name" targets="Variable core.modules.base.OTModuleAutoForm.OTModuleAutoForm._formset=core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#_formset"><a title="core.modules.base.OTModuleAutoForm.OTModuleAutoForm._formset" class="py-name" href="#" onclick="return doclink('link-105', '_formset', 'link-105');">_formset</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt>  </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">                <tt class="py-op">(</tt><tt class="py-string">'_video'</tt><tt class="py-op">,</tt><tt class="py-string">'_polygons'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-string">"_player"</tt><tt class="py-op">,</tt><tt class="py-op">(</tt><tt class="py-string">'_colorDomain'</tt><tt class="py-op">,</tt><tt class="py-string">'_colorComponent'</tt><tt class="py-op">,</tt><tt class="py-string">'_adaptiveMethod'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-string">'_boxWidth'</tt><tt class="py-op">,</tt> <tt class="py-string">'_boxHeight'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-op">(</tt><tt class="py-string">'_blockSize'</tt><tt class="py-op">,</tt><tt class="py-string">"_C"</tt><tt class="py-op">)</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">            <tt class="py-op">]</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-106" class="py-name" targets="Method core.modules.formcontrols.OTControlBase.OTControlBase.valueUpdated()=core.modules.formcontrols.OTControlBase.OTControlBase-class.html#valueUpdated,Method core.modules.formcontrols.OTParamBase.OTParamBase.valueUpdated()=core.modules.formcontrols.OTParamBase.OTParamBase-class.html#valueUpdated"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.valueUpdated
+core.modules.formcontrols.OTParamBase.OTParamBase.valueUpdated" class="py-name" href="#" onclick="return doclink('link-106', 'valueUpdated', 'link-106');">valueUpdated</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-107" class="py-name" targets="Method core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.refreshValue()=core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter%27.OTModuleBlobsFilter-class.html#refreshValue,Method core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.refreshValue()=core.plugins.OTModuleColorFilter.OTModuleColorFilter%27.OTModuleColorFilter-class.html#refreshValue,Method core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.refreshValue()=core.plugins.OTModuleSubBackground.OTModuleSubBackground%27.OTModuleSubBackground-class.html#refreshValue"><a title="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.refreshValue
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.refreshValue
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.refreshValue" class="py-name" href="#" onclick="return doclink('link-107', 'refreshValue', 'link-107');">refreshValue</a></tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorComponent</tt><tt class="py-op">.</tt><tt id="link-108" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.valueUpdated
+core.modules.formcontrols.OTParamBase.OTParamBase.valueUpdated" class="py-name" href="#" onclick="return doclink('link-108', 'valueUpdated', 'link-106');">valueUpdated</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-109" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.refreshValue
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.refreshValue
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.refreshValue" class="py-name" href="#" onclick="return doclink('link-109', 'refreshValue', 'link-107');">refreshValue</a></tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_adaptiveMethod</tt><tt class="py-op">.</tt><tt id="link-110" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.valueUpdated
+core.modules.formcontrols.OTParamBase.OTParamBase.valueUpdated" class="py-name" href="#" onclick="return doclink('link-110', 'valueUpdated', 'link-106');">valueUpdated</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-111" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.refreshValue
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.refreshValue
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.refreshValue" class="py-name" href="#" onclick="return doclink('link-111', 'refreshValue', 'link-107');">refreshValue</a></tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_boxHeight</tt><tt class="py-op">.</tt><tt id="link-112" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.valueUpdated
+core.modules.formcontrols.OTParamBase.OTParamBase.valueUpdated" class="py-name" href="#" onclick="return doclink('link-112', 'valueUpdated', 'link-106');">valueUpdated</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-113" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.refreshValue
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.refreshValue
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.refreshValue" class="py-name" href="#" onclick="return doclink('link-113', 'refreshValue', 'link-107');">refreshValue</a></tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_boxWidth</tt><tt class="py-op">.</tt><tt id="link-114" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.valueUpdated
+core.modules.formcontrols.OTParamBase.OTParamBase.valueUpdated" class="py-name" href="#" onclick="return doclink('link-114', 'valueUpdated', 'link-106');">valueUpdated</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-115" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.refreshValue
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.refreshValue
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.refreshValue" class="py-name" href="#" onclick="return doclink('link-115', 'refreshValue', 'link-107');">refreshValue</a></tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_blockSize</tt><tt class="py-op">.</tt><tt id="link-116" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.valueUpdated
+core.modules.formcontrols.OTParamBase.OTParamBase.valueUpdated" class="py-name" href="#" onclick="return doclink('link-116', 'valueUpdated', 'link-106');">valueUpdated</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-117" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.refreshValue
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.refreshValue
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.refreshValue" class="py-name" href="#" onclick="return doclink('link-117', 'refreshValue', 'link-107');">refreshValue</a></tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_C</tt><tt class="py-op">.</tt><tt id="link-118" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.valueUpdated
+core.modules.formcontrols.OTParamBase.OTParamBase.valueUpdated" class="py-name" href="#" onclick="return doclink('link-118', 'valueUpdated', 'link-106');">valueUpdated</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-119" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.refreshValue
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.refreshValue
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.refreshValue" class="py-name" href="#" onclick="return doclink('link-119', 'refreshValue', 'link-107');">refreshValue</a></tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">         </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_player</tt><tt class="py-op">.</tt><tt id="link-120" class="py-name" targets="Method core.modules.formcontrols.OTParamPlayer.OTParamPlayer.processFrame()=core.modules.formcontrols.OTParamPlayer.OTParamPlayer-class.html#processFrame,Method core.modules.modulestypes.OTModuleInputVideo.OTModuleInputVideo.processFrame()=core.modules.modulestypes.OTModuleInputVideo.OTModuleInputVideo-class.html#processFrame,Method core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.processFrame()=core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#processFrame,Method core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.processFrame()=core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc%27.OTModuleBackgroundCalc-class.html#processFrame,Method core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.processFrame()=core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter%27.OTModuleBlobsFilter-class.html#processFrame,Method core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.processFrame()=core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions%27.OTModuleClusterObjectsPositions-class.html#processFrame,Method core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.processFrame()=core.plugins.OTModuleColorFilter.OTModuleColorFilter%27.OTModuleColorFilter-class.html#processFrame,Method core.plugins.OTModuleGeometry.OTModuleGeometry'.OTModuleGeometry.processFrame()=core.plugins.OTModuleGeometry.OTModuleGeometry%27.OTModuleGeometry-class.html#processFrame,Method core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.processFrame()=core.plugins.OTModuleSubBackground.OTModuleSubBackground%27.OTModuleSubBackground-class.html#processFrame"><a title="core.modules.formcontrols.OTParamPlayer.OTParamPlayer.processFrame
+core.modules.modulestypes.OTModuleInputVideo.OTModuleInputVideo.processFrame
+core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.processFrame
+core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.processFrame
+core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.processFrame
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.processFrame
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.processFrame
+core.plugins.OTModuleGeometry.OTModuleGeometry'.OTModuleGeometry.processFrame
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.processFrame" class="py-name" href="#" onclick="return doclink('link-120', 'processFrame', 'link-120');">processFrame</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-121" class="py-name"><a title="core.modules.formcontrols.OTParamPlayer.OTParamPlayer.processFrame
+core.modules.modulestypes.OTModuleInputVideo.OTModuleInputVideo.processFrame
+core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.processFrame
+core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.processFrame
+core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.processFrame
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.processFrame
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.processFrame
+core.plugins.OTModuleGeometry.OTModuleGeometry'.OTModuleGeometry.processFrame
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.processFrame" class="py-name" href="#" onclick="return doclink('link-121', 'processFrame', 'link-120');">processFrame</a></tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_video</tt><tt class="py-op">.</tt><tt id="link-122" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.valueUpdated
+core.modules.formcontrols.OTParamBase.OTParamBase.valueUpdated" class="py-name" href="#" onclick="return doclink('link-122', 'valueUpdated', 'link-106');">valueUpdated</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-123" class="py-name" targets="Method core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.newVideoInputChoosen()=core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#newVideoInputChoosen,Method core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.newVideoInputChoosen()=core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc%27.OTModuleBackgroundCalc-class.html#newVideoInputChoosen,Method core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.newVideoInputChoosen()=core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter%27.OTModuleBlobsFilter-class.html#newVideoInputChoosen,Method core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.newVideoInputChoosen()=core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions%27.OTModuleClusterObjectsPositions-class.html#newVideoInputChoosen,Method core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.newVideoInputChoosen()=core.plugins.OTModuleColorFilter.OTModuleColorFilter%27.OTModuleColorFilter-class.html#newVideoInputChoosen,Method core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.newVideoInputChoosen()=core.plugins.OTModuleSubBackground.OTModuleSubBackground%27.OTModuleSubBackground-class.html#newVideoInputChoosen"><a title="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.newVideoInputChoosen
+core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.newVideoInputChoosen
+core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.newVideoInputChoosen
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.newVideoInputChoosen
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.newVideoInputChoosen
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.newVideoInputChoosen" class="py-name" href="#" onclick="return doclink('link-123', 'newVideoInputChoosen', 'link-123');">newVideoInputChoosen</a></tt> </tt>
+</div><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="OTModuleBlobsFilter.refreshValue"></a><div id="OTModuleBlobsFilter.refreshValue-def"><a name="L81"></a><tt class="py-lineno"> 81</tt> <a class="py-toggle" href="#" id="OTModuleBlobsFilter.refreshValue-toggle" onclick="return toggle('OTModuleBlobsFilter.refreshValue');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter-class.html#refreshValue">refreshValue</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTModuleBlobsFilter.refreshValue-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTModuleBlobsFilter.refreshValue-expanded"><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_player</tt><tt class="py-op">.</tt><tt id="link-124" class="py-name" targets="Method core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.refresh()=core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery-class.html#refresh,Method core.modules.formcontrols.OTParamPlayer.OTParamPlayer.refresh()=core.modules.formcontrols.OTParamPlayer.OTParamPlayer-class.html#refresh"><a title="core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.refresh
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.refresh" class="py-name" href="#" onclick="return doclink('link-124', 'refresh', 'link-124');">refresh</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"> </tt>
+<a name="OTModuleBlobsFilter.newVideoInputChoosen"></a><div id="OTModuleBlobsFilter.newVideoInputChoosen-def"><a name="L84"></a><tt class="py-lineno"> 84</tt> <a class="py-toggle" href="#" id="OTModuleBlobsFilter.newVideoInputChoosen-toggle" onclick="return toggle('OTModuleBlobsFilter.newVideoInputChoosen');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter-class.html#newVideoInputChoosen">newVideoInputChoosen</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTModuleBlobsFilter.newVideoInputChoosen-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTModuleBlobsFilter.newVideoInputChoosen-expanded"><a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt id="link-125" class="py-name"><a title="core.modules.formcontrols.OTParamVideoInput
+core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput" class="py-name" href="#" onclick="return doclink('link-125', 'OTParamVideoInput', 'link-8');">OTParamVideoInput</a></tt><tt class="py-op">.</tt><tt id="link-126" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.valueUpdated
+core.modules.formcontrols.OTParamBase.OTParamBase.valueUpdated" class="py-name" href="#" onclick="return doclink('link-126', 'valueUpdated', 'link-106');">valueUpdated</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_video</tt><tt class="py-op">,</tt><tt id="link-127" class="py-name" targets="Variable core.modules.formcontrols.OTControlBase.OTControlBase.value=core.modules.formcontrols.OTControlBase.OTControlBase-class.html#value,Variable core.modules.formcontrols.OTParamBase.OTParamBase.value=core.modules.formcontrols.OTParamBase.OTParamBase-class.html#value,Variable core.modules.formcontrols.OTParamButton.OTParamButton.value=core.modules.formcontrols.OTParamButton.OTParamButton-class.html#value,Variable core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value=core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox-class.html#value,Variable core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value=core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList-class.html#value,Variable core.modules.formcontrols.OTParamCombo.OTParamCombo.value=core.modules.formcontrols.OTParamCombo.OTParamCombo-class.html#value,Variable core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value=core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery-class.html#value,Variable core.modules.formcontrols.OTParamImage.OTParamImage.value=core.modules.formcontrols.OTParamImage.OTParamImage-class.html#value,Variable core.modules.formcontrols.OTParamList.OTParamList.value=core.modules.formcontrols.OTParamList.OTParamList-class.html#value,Variable core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value=core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection-class.html#value,Variable core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value=core.modules.formcontrols.OTParamPlayer.OTParamPlayer-class.html#value,Variable core.modules.formcontrols.OTParamProgress.OTParamProgress.value=core.modules.formcontrols.OTParamProgress.OTParamProgress-class.html#value,Variable core.modules.formcontrols.OTParamSlider.OTParamSlider.value=core.modules.formcontrols.OTParamSlider.OTParamSlider-class.html#value,Variable core.modules.formcontrols.OTParamText.OTParamText.value=core.modules.formcontrols.OTParamText.OTParamText-class.html#value,Variable core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value=core.modules.formcontrols.OTParamTextArea.OTParamTextArea-class.html#value,Variable core.modules.formcontrols.OTParamToggle.OTParamToggle.value=core.modules.formcontrols.OTParamToggle.OTParamToggle-class.html#value"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-127', 'value', 'link-127');">value</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-128" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-128', 'value', 'link-127');">value</a></tt><tt class="py-op">.</tt><tt id="link-129" class="py-name" targets="Variable core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#videoInput,Variable core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput=core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry%27.OTModuleMaskFromGeometry-class.html#videoInput,Variable core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput=core.plugins.OTModuleVideoInput.OTModuleVideoInput%27.OTModuleVideoInput-class.html#videoInput"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-129', 'videoInput', 'link-129');">videoInput</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_player</tt><tt class="py-op">.</tt><tt id="link-130" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-130', 'value', 'link-127');">value</a></tt> <tt class="py-op">=</tt> <tt id="link-131" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-131', 'value', 'link-127');">value</a></tt><tt class="py-op">.</tt><tt id="link-132" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-132', 'videoInput', 'link-129');">videoInput</a></tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">            <tt id="link-133" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-133', 'value', 'link-127');">value</a></tt><tt class="py-op">.</tt><tt id="link-134" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-134', 'videoInput', 'link-129');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-135" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.setFrame()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#setFrame,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.setFrame()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#setFrame,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.setFrame()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#setFrame,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.setFrame()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#setFrame"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.setFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.setFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.setFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.setFrame" class="py-name" href="#" onclick="return doclink('link-135', 'setFrame', 'link-135');">setFrame</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"> </tt>
+<a name="OTModuleBlobsFilter.processFrame"></a><div id="OTModuleBlobsFilter.processFrame-def"><a name="L90"></a><tt class="py-lineno"> 90</tt> <a class="py-toggle" href="#" id="OTModuleBlobsFilter.processFrame-toggle" onclick="return toggle('OTModuleBlobsFilter.processFrame');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter-class.html#processFrame">processFrame</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">frame</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTModuleBlobsFilter.processFrame-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTModuleBlobsFilter.processFrame-expanded"><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_video</tt><tt class="py-op">.</tt><tt id="link-136" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-136', 'value', 'link-127');">value</a></tt><tt class="py-op">.</tt><tt id="link-137" class="py-name"><a title="core.modules.formcontrols.OTParamPlayer.OTParamPlayer.processFrame
+core.modules.modulestypes.OTModuleInputVideo.OTModuleInputVideo.processFrame
+core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.processFrame
+core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.processFrame
+core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.processFrame
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.processFrame
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.processFrame
+core.plugins.OTModuleGeometry.OTModuleGeometry'.OTModuleGeometry.processFrame
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.processFrame" class="py-name" href="#" onclick="return doclink('link-137', 'processFrame', 'link-120');">processFrame</a></tt><tt class="py-op">(</tt><tt class="py-name">frame</tt><tt class="py-op">.</tt><tt class="py-name">copy</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_video</tt><tt class="py-op">.</tt><tt id="link-138" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-138', 'value', 'link-127');">value</a></tt><tt class="py-op">,</tt> <tt id="link-139" class="py-name"><a title="core.plugins.OTModuleColorFilter
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter" class="py-name" href="#" onclick="return doclink('link-139', 'OTModuleColorFilter', 'link-70');">OTModuleColorFilter</a></tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-140" class="py-name" targets="Variable core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry._original_frame=core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry-class.html#_original_frame"><a title="core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry._original_frame" class="py-name" href="#" onclick="return doclink('link-140', '_original_frame', 'link-140');">_original_frame</a></tt> <tt class="py-op">=</tt> <tt class="py-name">frame</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">            <tt class="py-name">blobs</tt> <tt class="py-op">=</tt> <tt id="link-141" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPThreshBlobs
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs" class="py-name" href="#" onclick="return doclink('link-141', 'OTPThreshBlobs', 'link-64');">OTPThreshBlobs</a></tt><tt class="py-op">.</tt><tt id="link-142" class="py-name" targets="Method core.controllers.OTPBase.OTPBase.compute()=core.controllers.OTPBase.OTPBase-class.html#compute,Method core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.compute()=core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector-class.html#compute,Method core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.compute()=core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground-class.html#compute,Method core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.compute()=core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur-class.html#compute,Method core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.compute()=core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter-class.html#compute,Method core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.compute()=core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs-class.html#compute,Method core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.compute()=core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground-class.html#compute,Method core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.compute()=core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#compute,Method core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.compute()=core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs-class.html#compute,Method core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.compute()=core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage-class.html#compute,Method core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.compute()=core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold-class.html#compute,Method core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.compute()=core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur-class.html#compute,Method core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.compute()=core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny-class.html#compute,Method core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.compute()=core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter-class.html#compute,Method core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.compute()=core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs-class.html#compute,Method core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.compute()=core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage-class.html#compute,Method core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.compute()=core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground-class.html#compute,Method core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.compute()=core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#compute,Method core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.compute()=core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry-class.html#compute,Method core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.compute()=core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo-class.html#compute"><a title="core.controllers.OTPBase.OTPBase.compute
+core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.compute
+core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.compute
+core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.compute
+core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.compute
+core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.compute
+core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.compute
+core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.compute
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.compute
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.compute
+core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.compute
+core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.compute
+core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.compute
+core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.compute
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.compute
+core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.compute
+core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.compute
+core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.compute
+core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.compute
+core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.compute" class="py-name" href="#" onclick="return doclink('link-142', 'compute', 'link-142');">compute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_video</tt><tt class="py-op">.</tt><tt id="link-143" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-143', 'value', 'link-127');">value</a></tt><tt class="py-op">.</tt><tt class="py-name">_objectsFound</tt><tt class="py-op">)</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">blob</tt> <tt class="py-keyword">in</tt> <tt class="py-name">blobs</tt><tt class="py-op">:</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                <tt class="py-name">p1</tt><tt class="py-op">,</tt> <tt class="py-name">p2</tt> <tt class="py-op">=</tt> <tt class="py-name">blob</tt><tt class="py-op">.</tt><tt class="py-name">_tb_cut_bounding</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">                <tt class="py-name">frame</tt><tt class="py-op">[</tt><tt class="py-name">p1</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">:</tt><tt class="py-name">p2</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">,</tt><tt class="py-name">p1</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">:</tt><tt class="py-name">p2</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt><tt class="py-number">2</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">blob</tt><tt class="py-op">.</tt><tt class="py-name">_tb_biggest_img</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">                <tt class="py-name">blob</tt><tt class="py-op">.</tt><tt id="link-144" class="py-name" targets="Method core.plugins.OTModuleBlobsFilter.OTPFindBlobs.Blob.draw()=core.plugins.OTModuleBlobsFilter.OTPFindBlobs.Blob-class.html#draw,Method core.plugins.OTModuleColorFilter.OTPFindBlobs.Blob.draw()=core.plugins.OTModuleColorFilter.OTPFindBlobs.Blob-class.html#draw,Method core.plugins.OTModuleSubBackground.OTPFindBlobs.Blob.draw()=core.plugins.OTModuleSubBackground.OTPFindBlobs.Blob-class.html#draw"><a title="core.plugins.OTModuleBlobsFilter.OTPFindBlobs.Blob.draw
+core.plugins.OTModuleColorFilter.OTPFindBlobs.Blob.draw
+core.plugins.OTModuleSubBackground.OTPFindBlobs.Blob.draw" class="py-name" href="#" onclick="return doclink('link-144', 'draw', 'link-144');">draw</a></tt><tt class="py-op">(</tt><tt class="py-name">frame</tt><tt class="py-op">)</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">            <tt class="py-name">frame</tt> <tt class="py-op">=</tt> <tt id="link-145" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPThreshImage
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage" class="py-name" href="#" onclick="return doclink('link-145', 'OTPThreshImage', 'link-66');">OTPThreshImage</a></tt><tt class="py-op">.</tt><tt id="link-146" class="py-name"><a title="core.controllers.OTPBase.OTPBase.compute
+core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.compute
+core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.compute
+core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.compute
+core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.compute
+core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.compute
+core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.compute
+core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.compute
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.compute
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.compute
+core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.compute
+core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.compute
+core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.compute
+core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.compute
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.compute
+core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.compute
+core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.compute
+core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.compute
+core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.compute
+core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.compute" class="py-name" href="#" onclick="return doclink('link-146', 'compute', 'link-142');">compute</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">frame</tt><tt class="py-op">)</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">             </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-name">frame</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt>
+<a name="OTModuleBlobsFilter.exportCodeTo"></a><div id="OTModuleBlobsFilter.exportCodeTo-def"><a name="L107"></a><tt class="py-lineno">107</tt> <a class="py-toggle" href="#" id="OTModuleBlobsFilter.exportCodeTo-toggle" onclick="return toggle('OTModuleBlobsFilter.exportCodeTo');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter-class.html#exportCodeTo">exportCodeTo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">folder</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTModuleBlobsFilter.exportCodeTo-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTModuleBlobsFilter.exportCodeTo-expanded"><a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">        <tt class="py-name">files_to_copy</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt>         </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-name">classes</tt><tt class="py-op">,</tt> <tt class="py-name">imports</tt><tt class="py-op">,</tt> <tt class="py-name">constructer_params</tt><tt class="py-op">,</tt> <tt class="py-name">parameters</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-name">classes_tmp</tt><tt class="py-op">,</tt> <tt class="py-name">imports_tmp</tt><tt class="py-op">,</tt> <tt class="py-name">constructer_params_tmp</tt><tt class="py-op">,</tt> <tt class="py-name">parameters_tmp</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_video</tt><tt class="py-op">.</tt><tt id="link-147" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-147', 'value', 'link-127');">value</a></tt><tt class="py-op">.</tt><tt id="link-148" class="py-name" targets="Method core.modules.base.OTModulePlugin.OTModulePlugin.exportCodeTo()=core.modules.base.OTModulePlugin.OTModulePlugin-class.html#exportCodeTo,Method core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.exportCodeTo()=core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc%27.OTModuleBackgroundCalc-class.html#exportCodeTo,Method core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.exportCodeTo()=core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter%27.OTModuleBlobsFilter-class.html#exportCodeTo,Method core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.exportCodeTo()=core.plugins.OTModuleColorFilter.OTModuleColorFilter%27.OTModuleColorFilter-class.html#exportCodeTo,Method core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.exportCodeTo()=core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry%27.OTModuleMaskFromGeometry-class.html#exportCodeTo,Method core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.exportCodeTo()=core.plugins.OTModuleSubBackground.OTModuleSubBackground%27.OTModuleSubBackground-class.html#exportCodeTo,Method core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.exportCodeTo()=core.plugins.OTModuleVideoInput.OTModuleVideoInput%27.OTModuleVideoInput-class.html#exportCodeTo"><a title="core.modules.base.OTModulePlugin.OTModulePlugin.exportCodeTo
+core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.exportCodeTo
+core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.exportCodeTo
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.exportCodeTo
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.exportCodeTo
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.exportCodeTo
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.exportCodeTo" class="py-name" href="#" onclick="return doclink('link-148', 'exportCodeTo', 'link-148');">exportCodeTo</a></tt><tt class="py-op">(</tt><tt class="py-name">folder</tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">        <tt class="py-name">classes</tt> <tt class="py-op">+=</tt> <tt class="py-name">classes_tmp</tt><tt class="py-op">;</tt> <tt class="py-name">imports</tt> <tt class="py-op">+=</tt> <tt class="py-name">imports_tmp</tt><tt class="py-op">;</tt> <tt class="py-name">constructer_params</tt> <tt class="py-op">+=</tt> <tt class="py-name">constructer_params_tmp</tt><tt class="py-op">;</tt> <tt class="py-name">parameters</tt> <tt class="py-op">+=</tt> <tt class="py-name">parameters_tmp</tt><tt class="py-op">;</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">        <tt class="py-comment">#SET OTPRemoveBackground</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_video</tt><tt class="py-op">.</tt><tt id="link-149" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-149', 'value', 'link-127');">value</a></tt><tt class="py-op">,</tt> <tt id="link-150" class="py-name"><a title="core.plugins.OTModuleColorFilter
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter" class="py-name" href="#" onclick="return doclink('link-150', 'OTModuleColorFilter', 'link-70');">OTModuleColorFilter</a></tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">            <tt class="py-name">files_to_copy</tt><tt class="py-op">.</tt><tt id="link-151" class="py-name" targets="Method core.utils.tools.RingBuffer.append()=core.utils.tools.RingBuffer-class.html#append"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-151', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt> <tt class="py-string">'OTPThreshBlobs'</tt> <tt class="py-op">)</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-152" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-152', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_color_component = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorComponent</tt><tt class="py-op">.</tt><tt id="link-153" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-153', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-154" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-154', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_color_domain = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-155" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-155', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-156" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-156', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_adaptive_method = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_adaptiveMethod</tt><tt class="py-op">.</tt><tt id="link-157" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-157', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-158" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-158', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_box_height = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_boxHeight</tt><tt class="py-op">.</tt><tt id="link-159" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-159', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-160" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-160', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_box_width = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_boxWidth</tt><tt class="py-op">.</tt><tt id="link-161" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-161', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-162" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-162', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_block_size = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_blockSize</tt><tt class="py-op">.</tt><tt id="link-163" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-163', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-164" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-164', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_c = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_C</tt><tt class="py-op">.</tt><tt id="link-165" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-165', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">            <tt class="py-name">files_to_copy</tt><tt class="py-op">.</tt><tt id="link-166" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-166', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt> <tt class="py-string">'OTPThreshImage'</tt> <tt class="py-op">)</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-167" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-167', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_color_component = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorComponent</tt><tt class="py-op">.</tt><tt id="link-168" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-168', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-169" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-169', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_color_domain = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_colorDomain</tt><tt class="py-op">.</tt><tt id="link-170" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-170', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-171" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-171', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_adaptive_method = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_adaptiveMethod</tt><tt class="py-op">.</tt><tt id="link-172" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-172', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-173" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-173', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_block_size = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_blockSize</tt><tt class="py-op">.</tt><tt id="link-174" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-174', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">            <tt class="py-name">parameters</tt><tt class="py-op">.</tt><tt id="link-175" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-175', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">"self._param_tb_c = %d "</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_C</tt><tt class="py-op">.</tt><tt id="link-176" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-176', 'value', 'link-127');">value</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">        <tt class="py-comment">#END SET</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">     </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">        <tt class="py-name">classes</tt> <tt class="py-op">+=</tt> <tt class="py-name">files_to_copy</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">file_to_copy</tt> <tt class="py-keyword">in</tt> <tt class="py-name">files_to_copy</tt><tt class="py-op">:</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">            <tt class="py-name">filename</tt> <tt class="py-op">=</tt> <tt class="py-name">file_to_copy</tt><tt class="py-op">+</tt><tt class="py-string">".py"</tt><tt class="py-op">;</tt> <tt class="py-name">originalfilepath</tt> <tt class="py-op">=</tt> <tt id="link-177" class="py-name"><a title="core.utils.tools" class="py-name" href="#" onclick="return doclink('link-177', 'tools', 'link-57');">tools</a></tt><tt class="py-op">.</tt><tt id="link-178" class="py-name"><a title="core.utils.tools.getFileInSameDirectory" class="py-name" href="#" onclick="return doclink('link-178', 'getFileInSameDirectory', 'link-74');">getFileInSameDirectory</a></tt><tt class="py-op">(</tt><tt class="py-name">__file__</tt><tt class="py-op">,</tt> <tt class="py-name">filename</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> <tt class="py-name">destinyfilepath</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt> <tt class="py-name">folder</tt><tt class="py-op">,</tt> <tt class="py-name">filename</tt> <tt class="py-op">)</tt>             </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">            <tt class="py-name">f</tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">originalfilepath</tt><tt class="py-op">,</tt> <tt class="py-string">'r'</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> <tt id="link-179" class="py-name" targets="Variable core.modules.formcontrols.OTParamCombo.OTParamCombo.text=core.modules.formcontrols.OTParamCombo.OTParamCombo-class.html#text"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.text" class="py-name" href="#" onclick="return doclink('link-179', 'text', 'link-179');">text</a></tt> <tt class="py-op">=</tt> <tt class="py-name">f</tt><tt class="py-op">.</tt><tt id="link-180" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.read()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#read,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.read()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#read,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.read()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#read,Method core.datatypes.video.OTVideoInputMask.OTVideoInputMask.read()=core.datatypes.video.OTVideoInputMask.OTVideoInputMask-class.html#read,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.read()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#read,Method core.datatypes.video.OTVideoMask.OTVideoMask.read()=core.datatypes.video.OTVideoMask.OTVideoMask-class.html#read"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.read
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.read
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.read
+core.datatypes.video.OTVideoInputMask.OTVideoInputMask.read
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.read
+core.datatypes.video.OTVideoMask.OTVideoMask.read" class="py-name" href="#" onclick="return doclink('link-180', 'read', 'link-180');">read</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> <tt class="py-name">f</tt><tt class="py-op">.</tt><tt id="link-181" class="py-name" targets="Method core.modules.base.OTModule.OTModule.close()=core.modules.base.OTModule.OTModule-class.html#close,Method core.modules.base.OTModuleProject.OTModuleProject.close()=core.modules.base.OTModuleProject.OTModuleProject-class.html#close"><a title="core.modules.base.OTModule.OTModule.close
+core.modules.base.OTModuleProject.OTModuleProject.close" class="py-name" href="#" onclick="return doclink('link-181', 'close', 'link-181');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> <tt id="link-182" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.text" class="py-name" href="#" onclick="return doclink('link-182', 'text', 'link-179');">text</a></tt> <tt class="py-op">=</tt> <tt id="link-183" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.text" class="py-name" href="#" onclick="return doclink('link-183', 'text', 'link-179');">text</a></tt><tt class="py-op">.</tt><tt class="py-name">replace</tt><tt class="py-op">(</tt><tt class="py-string">"from core.controllers."</tt><tt class="py-op">,</tt> <tt class="py-string">"from "</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> <tt class="py-name">f</tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">destinyfilepath</tt><tt class="py-op">,</tt> <tt class="py-string">'w'</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> <tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt id="link-184" class="py-name"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.text" class="py-name" href="#" onclick="return doclink('link-184', 'text', 'link-179');">text</a></tt><tt class="py-op">)</tt><tt class="py-op">;</tt> <tt class="py-name">f</tt><tt class="py-op">.</tt><tt id="link-185" class="py-name"><a title="core.modules.base.OTModule.OTModule.close
+core.modules.base.OTModuleProject.OTModuleProject.close" class="py-name" href="#" onclick="return doclink('link-185', 'close', 'link-181');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">            <tt class="py-name">imports</tt><tt class="py-op">.</tt><tt id="link-186" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-186', 'append', 'link-151');">append</a></tt><tt class="py-op">(</tt> <tt class="py-string">"from %s import %s"</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-name">file_to_copy</tt><tt class="py-op">,</tt> <tt class="py-name">file_to_copy</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">         </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">classes</tt><tt class="py-op">,</tt> <tt class="py-name">imports</tt><tt class="py-op">,</tt> <tt class="py-name">constructer_params</tt><tt class="py-op">,</tt> <tt class="py-name">parameters</tt> </tt>
+</div></div><a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Jan  8 12:26:16 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

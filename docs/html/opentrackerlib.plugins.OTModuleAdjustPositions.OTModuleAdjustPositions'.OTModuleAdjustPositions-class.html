@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="core-module.html">Package&nbsp;core</a> ::
+        <a href="core.plugins-module.html">Package&nbsp;plugins</a> ::
+        <a href="core.plugins.OTModuleAdjustPositions-module.html">Package&nbsp;OTModuleAdjustPositions</a> ::
+        <a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-module.html">Module&nbsp;OTModuleAdjustPositions'</a> ::
+        Class&nbsp;OTModuleAdjustPositions
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class OTModuleAdjustPositions</h1><p class="nomargin-top"><span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_opentrac_45" name="uml_class_diagram_for_opentrac_45">
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#__init__" title="x.__init__(...) initializes x; see help(type(x)) for signature" alt="" coords="127,695,800,713"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#addDuplicatedRow" title="Event called when a user click on the popup menu option" alt="" coords="127,713,800,732"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#approximatePositions" title="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions&#39;.OTModuleAdjustPositions.approximatePositions" alt="" coords="127,732,800,751"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#drawCurrentPositionWhenIsPlaying" title="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions&#39;.OTModuleAdjustPositions.drawCurrentPositionWhenIsPlaying" alt="" coords="127,751,800,769"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#drawRow" title="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions&#39;.OTModuleAdjustPositions.drawRow" alt="" coords="127,769,800,788"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#exportFunction" title="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions&#39;.OTModuleAdjustPositions.exportFunction" alt="" coords="127,788,800,807"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#importFunction" title="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions&#39;.OTModuleAdjustPositions.importFunction" alt="" coords="127,807,800,825"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#interpolateAllPositions" title="Event called when user click in interpolation button" alt="" coords="127,825,800,844"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#interpolateBetween2Rows" title="Interpolate values between 2 rows" alt="" coords="127,844,800,863"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#interpolationPositions" title="Event called when user click in interpolation button" alt="" coords="127,863,800,881"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#newPositionsChoosen" title="Event called when a new dataset of Positions is choosen" alt="" coords="127,881,800,900"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#newVideoInputChoosen" title="Event called when a user select rows using the popup menu" alt="" coords="127,900,800,919"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#onEndDragInVideoWindow" title="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions&#39;.OTModuleAdjustPositions.onEndDragInVideoWindow" alt="" coords="127,919,800,937"/>
+<area shape="rect" id="node289" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#updateTrackRange" title="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions&#39;.OTModuleAdjustPositions.updateTrackRange" alt="" coords="127,956,800,975"/>
+<area shape="rect" id="node1" href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html" title="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions&#39;.OTModuleAdjustPositions" alt="" coords="115,662,811,981"/>
+<area shape="rect" id="node290" href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#countAllResults" title="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin&#39;.OTModuleResultsPlugin.countAllResults" alt="" coords="17,505,453,524"/>
+<area shape="rect" id="node290" href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#getAllQueries" title="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin&#39;.OTModuleResultsPlugin.getAllQueries" alt="" coords="17,524,453,543"/>
+<area shape="rect" id="node290" href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#getAllResults" title="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin&#39;.OTModuleResultsPlugin.getAllResults" alt="" coords="17,543,453,561"/>
+<area shape="rect" id="node290" href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#getAllTables" title="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin&#39;.OTModuleResultsPlugin.getAllTables" alt="" coords="17,561,453,580"/>
+<area shape="rect" id="node290" href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#loadSavedContent" title="OTModule.loadSavedContent reimplementation" alt="" coords="17,580,453,599"/>
+<area shape="rect" id="node290" href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#newResultChoosen" title="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin&#39;.OTModuleResultsPlugin.newResultChoosen" alt="" coords="17,599,453,617"/>
+<area shape="rect" id="node290" href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#saveContent" title="OTModule.saveContent reimplementation" alt="" coords="17,617,453,636"/>
+<area shape="rect" id="node2" href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html" title="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin&#39;.OTModuleResultsPlugin" alt="" coords="5,473,464,642"/>
+<area shape="rect" id="node294" href="core.modules.base.OTModule.OTModule-class.html#name" title="core.modules.base.OTModule.OTModule.name" alt="" coords="131,31,341,49"/>
+<area shape="rect" id="node294" href="core.modules.base.OTModule.OTModule-class.html#uid" title="core.modules.base.OTModule.OTModule.uid" alt="" coords="131,49,341,68"/>
+<area shape="rect" id="node294" href="core.modules.base.OTModule.OTModule-class.html#close" title="Close the module" alt="" coords="131,71,341,89"/>
+<area shape="rect" id="node3" href="core.modules.base.OTModule.OTModule-class.html" title="Module abstract class implementation" alt="" coords="119,6,353,95"/>
+<area shape="rect" id="node293" href="core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html#form" title="core.modules.base.OTModuleProjectItem.OTModuleProjectItem.form" alt="" coords="63,140,408,159"/>
+<area shape="rect" id="node293" href="core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html#parentModule" title="core.modules.base.OTModuleProjectItem.OTModuleProjectItem.parentModule" alt="" coords="63,159,408,177"/>
+<area shape="rect" id="node4" href="core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html" title="Abstract project module item abstract class implementation" alt="" coords="51,115,419,191"/>
+<area shape="rect" id="node292" href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#formControls" title="Return all the form controls from the the module" alt="" coords="73,236,399,255"/>
+<area shape="rect" id="node292" href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#initForm" title="Generate the module Form" alt="" coords="73,257,399,276"/>
+<area shape="rect" id="node292" href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#generateTabs" title="Generate QTabWidget for the module form" alt="" coords="73,276,399,295"/>
+<area shape="rect" id="node292" href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#generatePanel" title="Generate a panel for the module form with all the controls formset format &#160;example: [(&#39;_video&#39;, &#39;_arenas&#39;, &#39;_run&#39;), {&quot;Player&quot;:[&#39;_threshold&#39;, &#160;&quot;_player&quot;, &quot;=&quot;, &quot;_results&quot;, &quot;_query&quot;], &quot;Background image&quot;:[(&#39; &#39;, &#160;&#39;_selectBackground&#39;, &#39;_paintBackground&#39;), &#39;_image&#39;]}, &quot;_progress&quot;] tuple: &#160;will display the controls in the same horizontal line list: will display &#160;the controls in the same vertical line dict: will display the controls in a tab widget &#39;||&#39;: will plit the controls in a horizontal line &#39;=&#39;: will plit the controls in a vertical line" alt="" coords="73,295,399,313"/>
+<area shape="rect" id="node292" href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#hideTab" title="core.modules.base.OTModuleAutoForm.OTModuleAutoForm.hideTab" alt="" coords="73,313,399,332"/>
+<area shape="rect" id="node292" href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#showTab" title="core.modules.base.OTModuleAutoForm.OTModuleAutoForm.showTab" alt="" coords="73,332,399,351"/>
+<area shape="rect" id="node292" href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#show" title="OTModuleProjectItem.show reimplementation" alt="" coords="73,351,399,369"/>
+<area shape="rect" id="node6" href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html" title="&quot; This implements the module form visualization in the controller window" alt="" coords="61,211,411,375"/>
+<area shape="rect" id="node291" href="core.modules.base.OTModulePlugin.OTModulePlugin-class.html#exportCodeTo" title="core.modules.base.OTModulePlugin.OTModulePlugin.exportCodeTo" alt="" coords="95,428,377,447"/>
+<area shape="rect" id="node5" href="core.modules.base.OTModulePlugin.OTModulePlugin-class.html" title="Abstract class that implement a plugin" alt="" coords="83,395,389,453"/>
+<area shape="rect" id="node7" href="core.modules.modulestypes.OTModulePositions.OTModulePositions-class.html" title="core.modules.modulestypes.OTModulePositions.OTModulePositions" alt="" coords="493,535,888,579"/>
+<area shape="rect" id="node8" href="core.modules.modulestypes.OTModuleOutput.OTModuleOutput-class.html" title="core.modules.modulestypes.OTModuleOutput.OTModuleOutput" alt="" coords="508,402,873,446"/>
+</map>
+  <img src="uml_class_diagram_for_opentrac_45.gif" alt='' usemap="#uml_class_diagram_for_opentrac_45" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addDuplicatedRow"></a><span class="summary-sig-name">addDuplicatedRow</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Event called when a user click on the popup menu option</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.addDuplicatedRow">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="approximatePositions"></a><span class="summary-sig-name">approximatePositions</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.approximatePositions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="drawCurrentPositionWhenIsPlaying"></a><span class="summary-sig-name">drawCurrentPositionWhenIsPlaying</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">frame</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.drawCurrentPositionWhenIsPlaying">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="drawRow"></a><span class="summary-sig-name">drawRow</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">frame</span>,
+        <span class="summary-sig-arg">row</span>,
+        <span class="summary-sig-arg">color</span>=<span class="summary-sig-default"><code class="variable-group">(</code>0<code class="variable-op">, </code>255<code class="variable-op">, </code>0<code class="variable-group">)</code></span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.drawRow">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="exportFunction"></a><span class="summary-sig-name">exportFunction</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.exportFunction">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="importFunction"></a><span class="summary-sig-name">importFunction</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.importFunction">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="interpolateAllPositions"></a><span class="summary-sig-name">interpolateAllPositions</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Event called when user click in interpolation button</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.interpolateAllPositions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#interpolateBetween2Rows" class="summary-sig-name">interpolateBetween2Rows</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">row1</span>,
+        <span class="summary-sig-arg">row2</span>,
+        <span class="summary-sig-arg">update</span>=<span class="summary-sig-default">&lt;function &lt;lambda&gt; at 0x533b500&gt;</span>,
+        <span class="summary-sig-arg">cols_2_interpolate</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Interpolate values between 2 rows</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.interpolateBetween2Rows">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="interpolationPositions"></a><span class="summary-sig-name">interpolationPositions</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Event called when user click in interpolation button</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.interpolationPositions">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#newPositionsChoosen" class="summary-sig-name">newPositionsChoosen</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Event called when a new dataset of Positions is choosen</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.newPositionsChoosen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#newVideoInputChoosen" class="summary-sig-name">newVideoInputChoosen</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Event called when a user select rows using the popup menu</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.newVideoInputChoosen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="onEndDragInVideoWindow"></a><span class="summary-sig-name">onEndDragInVideoWindow</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">startPoint</span>,
+        <span class="summary-sig-arg">endPoint</span>,
+        <span class="summary-sig-arg">refresh</span>=<span class="summary-sig-default">True</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.onEndDragInVideoWindow">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#processFrame" class="summary-sig-name">processFrame</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">frame</span>,
+        <span class="summary-sig-arg">drawSelectedRows</span>=<span class="summary-sig-default">True</span>)</span><br />
+      This is an event called by the player before he shows the video frame</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.processFrame">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#search_4_frame" class="summary-sig-name">search_4_frame</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">frame2Search</span>,
+        <span class="summary-sig-arg">startAtRow</span>=<span class="summary-sig-default">0</span>)</span><br />
+      This function search for a frame in the List _query</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.search_4_frame">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#selectionChanged" class="summary-sig-name">selectionChanged</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">selected</span>,
+        <span class="summary-sig-arg">deselected</span>)</span><br />
+      Redefinition of the function selectionChanged from 
+      OTModuleResultsPlugin</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.selectionChanged">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="showColumns4Interpolation"></a><span class="summary-sig-name">showColumns4Interpolation</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Event called when a user click on the popup menu option</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.showColumns4Interpolation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="showColumns4InterpolationAll"></a><span class="summary-sig-name">showColumns4InterpolationAll</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Event called when a user click on the popup menu option</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.showColumns4InterpolationAll">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="showHideDrawFunction"></a><span class="summary-sig-name">showHideDrawFunction</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.showHideDrawFunction">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="showTrackToggle"></a><span class="summary-sig-name">showTrackToggle</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.showTrackToggle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="tableSelectionChanged"></a><span class="summary-sig-name">tableSelectionChanged</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Event called when a user select rows using the popup menu</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.tableSelectionChanged">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateProgressBar"></a><span class="summary-sig-name">updateProgressBar</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.updateProgressBar">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateTrackRange"></a><span class="summary-sig-name">updateTrackRange</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.updateTrackRange">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html">OTModuleResultsPlugin.OTModuleResultsPlugin'.OTModuleResultsPlugin</a></code></b>:
+      <code><a href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#countAllResults">countAllResults</a></code>,
+      <code><a href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#getAllQueries">getAllQueries</a></code>,
+      <code><a href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#getAllResults">getAllResults</a></code>,
+      <code><a href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#getAllTables">getAllTables</a></code>,
+      <code><a href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#loadSavedContent">loadSavedContent</a></code>,
+      <code><a href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#newResultChoosen">newResultChoosen</a></code>,
+      <code><a href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#saveContent">saveContent</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModulePlugin.OTModulePlugin-class.html">modules.base.OTModulePlugin.OTModulePlugin</a></code></b>:
+      <code><a href="core.modules.base.OTModulePlugin.OTModulePlugin-class.html#exportCodeTo">exportCodeTo</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html">modules.base.OTModuleAutoForm.OTModuleAutoForm</a></code></b>:
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#generatePanel">generatePanel</a></code>,
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#generateTabs">generateTabs</a></code>,
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#hideTab">hideTab</a></code>,
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#initForm">initForm</a></code>,
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#show">show</a></code>,
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#showTab">showTab</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModule.OTModule-class.html">modules.base.OTModule.OTModule</a></code></b>:
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#close">close</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html">modules.base.OTModuleAutoForm.OTModuleAutoForm</a></code></b> (private):
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#_formLoaded" onclick="show_private();">_formLoaded</a></code>,
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#_formset" onclick="show_private();">_formset</a></code>,
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#_subwindow" onclick="show_private();">_subwindow</a></code>,
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#_tabs" onclick="show_private();">_tabs</a></code>
+      </p></div>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html">modules.base.OTModuleProjectItem.OTModuleProjectItem</a></code></b> (private):
+      <code><a href="core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html#_form" onclick="show_private();">_form</a></code>,
+      <code><a href="core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html#_iconFile" onclick="show_private();">_iconFile</a></code>,
+      <code><a href="core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html#_parentModule" onclick="show_private();">_parentModule</a></code>
+      </p></div>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModule.OTModule-class.html">modules.base.OTModule.OTModule</a></code></b> (private):
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#_name" onclick="show_private();">_name</a></code>,
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#_unique_id" onclick="show_private();">_unique_id</a></code>,
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#_version" onclick="show_private();">_version</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html">modules.base.OTModuleAutoForm.OTModuleAutoForm</a></code></b>:
+      <code><a href="core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#formControls">formControls</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html">modules.base.OTModuleProjectItem.OTModuleProjectItem</a></code></b>:
+      <code><a href="core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html#form">form</a></code>,
+      <code><a href="core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html#parentModule">parentModule</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModule.OTModule-class.html">modules.base.OTModule.OTModule</a></code></b>:
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#name">name</a></code>,
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#uid">uid</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="interpolateBetween2Rows"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">interpolateBetween2Rows</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">row1</span>,
+        <span class="sig-arg">row2</span>,
+        <span class="sig-arg">update</span>=<span class="sig-default">&lt;function &lt;lambda&gt; at 0x533b500&gt;</span>,
+        <span class="sig-arg">cols_2_interpolate</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.interpolateBetween2Rows">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Interpolate values between 2 rows</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>row1</code></strong> (Integer) - First row</li>
+        <li><strong class="pname"><code>row2</code></strong> (Integer) - First row</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="newPositionsChoosen"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">newPositionsChoosen</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.newPositionsChoosen">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Event called when a new dataset of Positions is choosen</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>frame</code></strong> (Numpy array) - Frame that would be showed</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="newVideoInputChoosen"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">newVideoInputChoosen</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.newVideoInputChoosen">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Event called when a user select rows using the popup menu</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>value</code></strong> (OTModule) - Video module</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="processFrame"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">processFrame</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">frame</span>,
+        <span class="sig-arg">drawSelectedRows</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.processFrame">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This is an event called by the player before he shows the video 
+  frame</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>frame</code></strong> (Numpy array) - Frame that would be showed</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="search_4_frame"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">search_4_frame</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">frame2Search</span>,
+        <span class="sig-arg">startAtRow</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.search_4_frame">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This function search for a frame in the List _query</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>frame2Search</code></strong> (Integer) - Frame to search</li>
+        <li><strong class="pname"><code>startAtRow</code></strong> (Integer) - Start looking in the List row index</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="selectionChanged"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">selectionChanged</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">selected</span>,
+        <span class="sig-arg">deselected</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27-pysrc.html#OTModuleAdjustPositions.selectionChanged">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Redefinition of the function selectionChanged from 
+  OTModuleResultsPlugin</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#selectionChanged">OTModuleResultsPlugin.OTModuleResultsPlugin'.OTModuleResultsPlugin.selectionChanged</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Jan  8 12:26:14 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

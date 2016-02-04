@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>core.datatypes.video.OTVideoInput</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="core-module.html">Package&nbsp;core</a> ::
+        <a href="core.datatypes-module.html">Package&nbsp;datatypes</a> ::
+        <a href="core.datatypes.video-module.html">Package&nbsp;video</a> ::
+        Module&nbsp;OTVideoInput
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="core.datatypes.video.OTVideoInput-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="core.datatypes.video.OTVideoInput-module.html">Module core.datatypes.video.OTVideoInput</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">cv2</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">numpy</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput"></a><div id="OTVideoInput-def"><a name="L4"></a><tt class="py-lineno">  4</tt> <a class="py-toggle" href="#" id="OTVideoInput-toggle" onclick="return toggle('OTVideoInput');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html">OTVideoInput</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="OTVideoInput-expanded"><a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line">    <tt id="link-0" class="py-name" targets="Variable core.datatypes.video.OTVideoInput.OTVideoInput.capture=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#capture"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-0', 'capture', 'link-0');">capture</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line">    <tt id="link-1" class="py-name" targets="Variable core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#captureFrom"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" class="py-name" href="#" onclick="return doclink('link-1', 'captureFrom', 'link-1');">captureFrom</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line">    <tt id="link-2" class="py-name" targets="Variable core.datatypes.video.OTVideoInput.OTVideoInput.width=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#width"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.width" class="py-name" href="#" onclick="return doclink('link-2', 'width', 'link-2');">width</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line">    <tt id="link-3" class="py-name" targets="Variable core.datatypes.video.OTVideoInput.OTVideoInput.height=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#height"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.height" class="py-name" href="#" onclick="return doclink('link-3', 'height', 'link-3');">height</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">    <tt id="link-4" class="py-name" targets="Variable core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameRate=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#videoFrameRate,Variable core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameRate=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#videoFrameRate,Variable core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameRate=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#videoFrameRate,Variable core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameRate=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#videoFrameRate"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameRate
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameRate
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameRate
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameRate" class="py-name" href="#" onclick="return doclink('link-4', 'videoFrameRate', 'link-4');">videoFrameRate</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line">    <tt id="link-5" class="py-name" targets="Variable core.datatypes.video.OTVideoInput.OTVideoInput.videoTotalFrames=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#videoTotalFrames"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoTotalFrames" class="py-name" href="#" onclick="return doclink('link-5', 'videoTotalFrames', 'link-5');">videoTotalFrames</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line">    <tt id="link-6" class="py-name" targets="Variable core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameTimeInterval=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#videoFrameTimeInterval,Variable core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameTimeInterval=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#videoFrameTimeInterval,Variable core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameTimeInterval=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#videoFrameTimeInterval,Variable core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameTimeInterval=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#videoFrameTimeInterval"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameTimeInterval" class="py-name" href="#" onclick="return doclink('link-6', 'videoFrameTimeInterval', 'link-6');">videoFrameTimeInterval</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line">    <tt id="link-7" class="py-name" targets="Variable core.datatypes.video.OTVideoInput.OTVideoInput.videoMaxMilliseconds=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#videoMaxMilliseconds"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoMaxMilliseconds" class="py-name" href="#" onclick="return doclink('link-7', 'videoMaxMilliseconds', 'link-7');">videoMaxMilliseconds</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line">    <tt id="link-8" class="py-name" targets="Variable core.datatypes.video.OTVideoInput.OTVideoInput.startFrame=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#startFrame,Variable core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.startFrame=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#startFrame,Variable core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.startFrame=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#startFrame,Variable core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.startFrame=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#startFrame,Variable core.modules.formcontrols.OTParamPlayer.OTParamPlayer.startFrame=core.modules.formcontrols.OTParamPlayer.OTParamPlayer-class.html#startFrame"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.startFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.startFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.startFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.startFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.startFrame" class="py-name" href="#" onclick="return doclink('link-8', 'startFrame', 'link-8');">startFrame</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">    <tt id="link-9" class="py-name" targets="Variable core.datatypes.video.OTVideoInput.OTVideoInput.endFrame=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#endFrame,Variable core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.endFrame=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#endFrame,Variable core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.endFrame=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#endFrame,Variable core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.endFrame=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#endFrame,Variable core.modules.formcontrols.OTParamPlayer.OTParamPlayer.endFrame=core.modules.formcontrols.OTParamPlayer.OTParamPlayer-class.html#endFrame"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.endFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.endFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.endFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.endFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.endFrame" class="py-name" href="#" onclick="return doclink('link-9', 'endFrame', 'link-9');">endFrame</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">     </tt>
+<a name="OTVideoInput.__init__"></a><div id="OTVideoInput.__init__-def"><a name="L18"></a><tt class="py-lineno"> 18</tt> <a class="py-toggle" href="#" id="OTVideoInput.__init__-toggle" onclick="return toggle('OTVideoInput.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">captureFrom</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.__init__-expanded"><a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-10" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" class="py-name" href="#" onclick="return doclink('link-10', 'captureFrom', 'link-1');">captureFrom</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-11', 'capture', 'link-0');">capture</a></tt> <tt class="py-op">=</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">VideoCapture</tt><tt class="py-op">(</tt> <tt id="link-12" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" class="py-name" href="#" onclick="return doclink('link-12', 'captureFrom', 'link-1');">captureFrom</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.init()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#init,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.init()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#init,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.init()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#init,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.init()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#init"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.init
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.init
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.init
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.init" class="py-name" href="#" onclick="return doclink('link-13', 'init', 'link-13');">init</a></tt><tt class="py-op">(</tt> <tt id="link-14" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" class="py-name" href="#" onclick="return doclink('link-14', 'captureFrom', 'link-1');">captureFrom</a></tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">             </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">    <tt class="py-comment">#Copy an existent object but create a new capture.</tt> </tt>
+<a name="OTVideoInput.merge"></a><div id="OTVideoInput.merge-def"><a name="L24"></a><tt class="py-lineno"> 24</tt> <a class="py-toggle" href="#" id="OTVideoInput.merge-toggle" onclick="return toggle('OTVideoInput.merge');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#merge">merge</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">videoInput</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.merge-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.merge-expanded"><a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-15" class="py-name" targets="Variable core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#videoInput,Variable core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput=core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry%27.OTModuleMaskFromGeometry-class.html#videoInput,Variable core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput=core.plugins.OTModuleVideoInput.OTModuleVideoInput%27.OTModuleVideoInput-class.html#videoInput"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-15', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">!=</tt><tt class="py-string">""</tt><tt class="py-op">:</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-16', 'capture', 'link-0');">capture</a></tt> <tt class="py-op">=</tt> <tt id="link-17" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-17', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-18', 'capture', 'link-0');">capture</a></tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" class="py-name" href="#" onclick="return doclink('link-19', 'captureFrom', 'link-1');">captureFrom</a></tt> <tt class="py-op">=</tt> <tt id="link-20" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-20', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" class="py-name" href="#" onclick="return doclink('link-21', 'captureFrom', 'link-1');">captureFrom</a></tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.width" class="py-name" href="#" onclick="return doclink('link-22', 'width', 'link-2');">width</a></tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-23', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.width" class="py-name" href="#" onclick="return doclink('link-24', 'width', 'link-2');">width</a></tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.height" class="py-name" href="#" onclick="return doclink('link-25', 'height', 'link-3');">height</a></tt> <tt class="py-op">=</tt> <tt id="link-26" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-26', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.height" class="py-name" href="#" onclick="return doclink('link-27', 'height', 'link-3');">height</a></tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameRate
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameRate
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameRate
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameRate" class="py-name" href="#" onclick="return doclink('link-28', 'videoFrameRate', 'link-4');">videoFrameRate</a></tt> <tt class="py-op">=</tt> <tt id="link-29" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-29', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameRate
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameRate
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameRate
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameRate" class="py-name" href="#" onclick="return doclink('link-30', 'videoFrameRate', 'link-4');">videoFrameRate</a></tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoTotalFrames" class="py-name" href="#" onclick="return doclink('link-31', 'videoTotalFrames', 'link-5');">videoTotalFrames</a></tt> <tt class="py-op">=</tt> <tt id="link-32" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-32', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoTotalFrames" class="py-name" href="#" onclick="return doclink('link-33', 'videoTotalFrames', 'link-5');">videoTotalFrames</a></tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameTimeInterval" class="py-name" href="#" onclick="return doclink('link-34', 'videoFrameTimeInterval', 'link-6');">videoFrameTimeInterval</a></tt> <tt class="py-op">=</tt> <tt id="link-35" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-35', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameTimeInterval" class="py-name" href="#" onclick="return doclink('link-36', 'videoFrameTimeInterval', 'link-6');">videoFrameTimeInterval</a></tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoMaxMilliseconds" class="py-name" href="#" onclick="return doclink('link-37', 'videoMaxMilliseconds', 'link-7');">videoMaxMilliseconds</a></tt> <tt class="py-op">=</tt> <tt id="link-38" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-38', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoMaxMilliseconds" class="py-name" href="#" onclick="return doclink('link-39', 'videoMaxMilliseconds', 'link-7');">videoMaxMilliseconds</a></tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.startFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.startFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.startFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.startFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.startFrame" class="py-name" href="#" onclick="return doclink('link-40', 'startFrame', 'link-8');">startFrame</a></tt> <tt class="py-op">=</tt> <tt id="link-41" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-41', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.startFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.startFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.startFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.startFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.startFrame" class="py-name" href="#" onclick="return doclink('link-42', 'startFrame', 'link-8');">startFrame</a></tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.endFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.endFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.endFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.endFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.endFrame" class="py-name" href="#" onclick="return doclink('link-43', 'endFrame', 'link-9');">endFrame</a></tt> <tt class="py-op">=</tt> <tt id="link-44" class="py-name"><a title="core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoInput
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.videoInput
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.videoInput" class="py-name" href="#" onclick="return doclink('link-44', 'videoInput', 'link-15');">videoInput</a></tt><tt class="py-op">.</tt><tt id="link-45" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.endFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.endFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.endFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.endFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.endFrame" class="py-name" href="#" onclick="return doclink('link-45', 'endFrame', 'link-9');">endFrame</a></tt> </tt>
+</div><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.get"></a><div id="OTVideoInput.get-def"><a name="L37"></a><tt class="py-lineno"> 37</tt> <a class="py-toggle" href="#" id="OTVideoInput.get-toggle" onclick="return toggle('OTVideoInput.get');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#get">get</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">flag</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-46', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-47" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.get()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#get,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.get()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#get,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.get()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#get,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.get()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#get,Method core.utils.tools.RingBuffer.get()=core.utils.tools.RingBuffer-class.html#get"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.get
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.get
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.get
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.get
+core.utils.tools.RingBuffer.get" class="py-name" href="#" onclick="return doclink('link-47', 'get', 'link-47');">get</a></tt><tt class="py-op">(</tt> <tt class="py-name">flag</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.set"></a><div id="OTVideoInput.set-def"><a name="L39"></a><tt class="py-lineno"> 39</tt> <a class="py-toggle" href="#" id="OTVideoInput.set-toggle" onclick="return toggle('OTVideoInput.set');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#set">set</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">flag</tt><tt class="py-op">,</tt> <tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-48" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-48', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-49" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.set()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#set,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.set()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#set,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.set()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#set,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.set()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#set,Method core.utils.tools.RingBuffer.set()=core.utils.tools.RingBuffer-class.html#set"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.set
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.set
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.set
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.set
+core.utils.tools.RingBuffer.set" class="py-name" href="#" onclick="return doclink('link-49', 'set', 'link-49');">set</a></tt><tt class="py-op">(</tt> <tt class="py-name">flag</tt><tt class="py-op">,</tt> <tt id="link-50" class="py-name" targets="Variable core.modules.formcontrols.OTControlBase.OTControlBase.value=core.modules.formcontrols.OTControlBase.OTControlBase-class.html#value,Variable core.modules.formcontrols.OTParamBase.OTParamBase.value=core.modules.formcontrols.OTParamBase.OTParamBase-class.html#value,Variable core.modules.formcontrols.OTParamButton.OTParamButton.value=core.modules.formcontrols.OTParamButton.OTParamButton-class.html#value,Variable core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value=core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox-class.html#value,Variable core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value=core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList-class.html#value,Variable core.modules.formcontrols.OTParamCombo.OTParamCombo.value=core.modules.formcontrols.OTParamCombo.OTParamCombo-class.html#value,Variable core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value=core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery-class.html#value,Variable core.modules.formcontrols.OTParamImage.OTParamImage.value=core.modules.formcontrols.OTParamImage.OTParamImage-class.html#value,Variable core.modules.formcontrols.OTParamList.OTParamList.value=core.modules.formcontrols.OTParamList.OTParamList-class.html#value,Variable core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value=core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection-class.html#value,Variable core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value=core.modules.formcontrols.OTParamPlayer.OTParamPlayer-class.html#value,Variable core.modules.formcontrols.OTParamProgress.OTParamProgress.value=core.modules.formcontrols.OTParamProgress.OTParamProgress-class.html#value,Variable core.modules.formcontrols.OTParamSlider.OTParamSlider.value=core.modules.formcontrols.OTParamSlider.OTParamSlider-class.html#value,Variable core.modules.formcontrols.OTParamText.OTParamText.value=core.modules.formcontrols.OTParamText.OTParamText-class.html#value,Variable core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value=core.modules.formcontrols.OTParamTextArea.OTParamTextArea-class.html#value,Variable core.modules.formcontrols.OTParamToggle.OTParamToggle.value=core.modules.formcontrols.OTParamToggle.OTParamToggle-class.html#value"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-50', 'value', 'link-50');">value</a></tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.reopen"></a><div id="OTVideoInput.reopen-def"><a name="L41"></a><tt class="py-lineno"> 41</tt> <a class="py-toggle" href="#" id="OTVideoInput.reopen-toggle" onclick="return toggle('OTVideoInput.reopen');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#reopen">reopen</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.reopen-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.reopen-expanded"><a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-51" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-51', 'capture', 'link-0');">capture</a></tt> <tt class="py-op">=</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">VideoCapture</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" class="py-name" href="#" onclick="return doclink('link-52', 'captureFrom', 'link-1');">captureFrom</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-53" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.init
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.init
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.init
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.init" class="py-name" href="#" onclick="return doclink('link-53', 'init', 'link-13');">init</a></tt><tt class="py-op">(</tt>  <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-54" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" class="py-name" href="#" onclick="return doclink('link-54', 'captureFrom', 'link-1');">captureFrom</a></tt>  <tt class="py-op">)</tt> </tt>
+</div><a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.clone"></a><div id="OTVideoInput.clone-def"><a name="L45"></a><tt class="py-lineno"> 45</tt> <a class="py-toggle" href="#" id="OTVideoInput.clone-toggle" onclick="return toggle('OTVideoInput.clone');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#clone">clone</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.clone-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.clone-expanded"><a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-name">obj</tt> <tt class="py-op">=</tt> <tt id="link-55" class="py-name" targets="Module core.datatypes.video.OTVideoInput=core.datatypes.video.OTVideoInput-module.html,Class core.datatypes.video.OTVideoInput.OTVideoInput=core.datatypes.video.OTVideoInput.OTVideoInput-class.html"><a title="core.datatypes.video.OTVideoInput
+core.datatypes.video.OTVideoInput.OTVideoInput" class="py-name" href="#" onclick="return doclink('link-55', 'OTVideoInput', 'link-55');">OTVideoInput</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">        <tt class="py-name">obj</tt><tt class="py-op">.</tt><tt id="link-56" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.merge()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#merge,Method core.datatypes.video.OTVideoInputMask.OTVideoInputMask.merge()=core.datatypes.video.OTVideoInputMask.OTVideoInputMask-class.html#merge"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.merge
+core.datatypes.video.OTVideoInputMask.OTVideoInputMask.merge" class="py-name" href="#" onclick="return doclink('link-56', 'merge', 'link-56');">merge</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">obj</tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.init"></a><div id="OTVideoInput.init-def"><a name="L50"></a><tt class="py-lineno"> 50</tt> <a class="py-toggle" href="#" id="OTVideoInput.init-toggle" onclick="return toggle('OTVideoInput.init');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#init">init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">captureFrom</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.init-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.init-expanded"><a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-57" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" class="py-name" href="#" onclick="return doclink('link-57', 'captureFrom', 'link-1');">captureFrom</a></tt> <tt class="py-op">=</tt> <tt id="link-58" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" class="py-name" href="#" onclick="return doclink('link-58', 'captureFrom', 'link-1');">captureFrom</a></tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-59" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.width" class="py-name" href="#" onclick="return doclink('link-59', 'width', 'link-2');">width</a></tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">round</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-60" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-60', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-61" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.get
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.get
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.get
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.get
+core.utils.tools.RingBuffer.get" class="py-name" href="#" onclick="return doclink('link-61', 'get', 'link-47');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">cv</tt><tt class="py-op">.</tt><tt class="py-name">CV_CAP_PROP_FRAME_WIDTH</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-62" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.height" class="py-name" href="#" onclick="return doclink('link-62', 'height', 'link-3');">height</a></tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">round</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-63" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-63', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-64" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.get
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.get
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.get
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.get
+core.utils.tools.RingBuffer.get" class="py-name" href="#" onclick="return doclink('link-64', 'get', 'link-47');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">cv</tt><tt class="py-op">.</tt><tt class="py-name">CV_CAP_PROP_FRAME_HEIGHT</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-65" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameRate
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameRate
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameRate
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameRate" class="py-name" href="#" onclick="return doclink('link-65', 'videoFrameRate', 'link-4');">videoFrameRate</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-66" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-66', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-67" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.get
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.get
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.get
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.get
+core.utils.tools.RingBuffer.get" class="py-name" href="#" onclick="return doclink('link-67', 'get', 'link-47');">get</a></tt><tt class="py-op">(</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">cv</tt><tt class="py-op">.</tt><tt class="py-name">CV_CAP_PROP_FPS</tt> <tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-68" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoTotalFrames" class="py-name" href="#" onclick="return doclink('link-68', 'videoTotalFrames', 'link-5');">videoTotalFrames</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-69" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-69', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-70" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.get
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.get
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.get
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.get
+core.utils.tools.RingBuffer.get" class="py-name" href="#" onclick="return doclink('link-70', 'get', 'link-47');">get</a></tt><tt class="py-op">(</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">cv</tt><tt class="py-op">.</tt><tt class="py-name">CV_CAP_PROP_FRAME_COUNT</tt> <tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-71" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameTimeInterval" class="py-name" href="#" onclick="return doclink('link-71', 'videoFrameTimeInterval', 'link-6');">videoFrameTimeInterval</a></tt> <tt class="py-op">=</tt> <tt class="py-number">1000</tt> <tt class="py-op">/</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-72" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameRate
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameRate
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameRate
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameRate" class="py-name" href="#" onclick="return doclink('link-72', 'videoFrameRate', 'link-4');">videoFrameRate</a></tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-73" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoMaxMilliseconds" class="py-name" href="#" onclick="return doclink('link-73', 'videoMaxMilliseconds', 'link-7');">videoMaxMilliseconds</a></tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">round</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-74" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.videoFrameTimeInterval
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.videoFrameTimeInterval" class="py-name" href="#" onclick="return doclink('link-74', 'videoFrameTimeInterval', 'link-6');">videoFrameTimeInterval</a></tt><tt class="py-op">*</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-75" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoTotalFrames" class="py-name" href="#" onclick="return doclink('link-75', 'videoTotalFrames', 'link-5');">videoTotalFrames</a></tt> <tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-76" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.startFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.startFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.startFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.startFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.startFrame" class="py-name" href="#" onclick="return doclink('link-76', 'startFrame', 'link-8');">startFrame</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-77" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.endFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.endFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.endFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.endFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.endFrame" class="py-name" href="#" onclick="return doclink('link-77', 'endFrame', 'link-9');">endFrame</a></tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-78" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.videoTotalFrames" class="py-name" href="#" onclick="return doclink('link-78', 'videoTotalFrames', 'link-5');">videoTotalFrames</a></tt> </tt>
+</div><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.get"></a><div id="OTVideoInput.get-def"><a name="L63"></a><tt class="py-lineno"> 63</tt> <a class="py-toggle" href="#" id="OTVideoInput.get-toggle" onclick="return toggle('OTVideoInput.get');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#get">get</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">flag</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-79" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-79', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-80" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.get
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.get
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.get
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.get
+core.utils.tools.RingBuffer.get" class="py-name" href="#" onclick="return doclink('link-80', 'get', 'link-47');">get</a></tt><tt class="py-op">(</tt><tt class="py-name">flag</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.set"></a><div id="OTVideoInput.set-def"><a name="L65"></a><tt class="py-lineno"> 65</tt> <a class="py-toggle" href="#" id="OTVideoInput.set-toggle" onclick="return toggle('OTVideoInput.set');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#set">set</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">flag</tt><tt class="py-op">,</tt> <tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-81" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-81', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-82" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.set
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.set
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.set
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.set
+core.utils.tools.RingBuffer.set" class="py-name" href="#" onclick="return doclink('link-82', 'set', 'link-49');">set</a></tt><tt class="py-op">(</tt><tt class="py-name">flag</tt><tt class="py-op">,</tt> <tt id="link-83" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-83', 'value', 'link-50');">value</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.read"></a><div id="OTVideoInput.read-def"><a name="L67"></a><tt class="py-lineno"> 67</tt> <a class="py-toggle" href="#" id="OTVideoInput.read-toggle" onclick="return toggle('OTVideoInput.read');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#read">read</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.read-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.read-expanded"><a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">        <tt class="py-name">currentFrame</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-84" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.getCurrentFrame()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#getCurrentFrame,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.getCurrentFrame()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#getCurrentFrame,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.getCurrentFrame()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#getCurrentFrame,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.getCurrentFrame()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#getCurrentFrame"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.getCurrentFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.getCurrentFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.getCurrentFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.getCurrentFrame" class="py-name" href="#" onclick="return doclink('link-84', 'getCurrentFrame', 'link-84');">getCurrentFrame</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">currentFrame</tt><tt class="py-op">&gt;</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-85" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.endFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.endFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.endFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.endFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.endFrame" class="py-name" href="#" onclick="return doclink('link-85', 'endFrame', 'link-9');">endFrame</a></tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">False</tt><tt class="py-op">,</tt> <tt class="py-name">None</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-86" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-86', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-87" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.read()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#read,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.read()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#read,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.read()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#read,Method core.datatypes.video.OTVideoInputMask.OTVideoInputMask.read()=core.datatypes.video.OTVideoInputMask.OTVideoInputMask-class.html#read,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.read()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#read,Method core.datatypes.video.OTVideoMask.OTVideoMask.read()=core.datatypes.video.OTVideoMask.OTVideoMask-class.html#read"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.read
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.read
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.read
+core.datatypes.video.OTVideoInputMask.OTVideoInputMask.read
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.read
+core.datatypes.video.OTVideoMask.OTVideoMask.read" class="py-name" href="#" onclick="return doclink('link-87', 'read', 'link-87');">read</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">currentFrame</tt><tt class="py-op">&lt;</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-88" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.startFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.startFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.startFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.startFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.startFrame" class="py-name" href="#" onclick="return doclink('link-88', 'startFrame', 'link-8');">startFrame</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-89" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.setFrame()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#setFrame,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.setFrame()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#setFrame,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.setFrame()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#setFrame,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.setFrame()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#setFrame"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.setFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.setFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.setFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.setFrame" class="py-name" href="#" onclick="return doclink('link-89', 'setFrame', 'link-89');">setFrame</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-90" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.startFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.startFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.startFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.startFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.startFrame" class="py-name" href="#" onclick="return doclink('link-90', 'startFrame', 'link-8');">startFrame</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">            <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-91" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-91', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-92" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.read
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.read
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.read
+core.datatypes.video.OTVideoInputMask.OTVideoInputMask.read
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.read
+core.datatypes.video.OTVideoMask.OTVideoMask.read" class="py-name" href="#" onclick="return doclink('link-92', 'read', 'link-87');">read</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">result</tt> </tt>
+</div><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.setFrame"></a><div id="OTVideoInput.setFrame-def"><a name="L77"></a><tt class="py-lineno"> 77</tt> <a class="py-toggle" href="#" id="OTVideoInput.setFrame-toggle" onclick="return toggle('OTVideoInput.setFrame');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#setFrame">setFrame</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">index</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.setFrame-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.setFrame-expanded"><a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">        <tt class="py-comment">#because of video compression the flag CV_CAP_PROP_POS_FRAMES  don't put</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-comment">#the pointer always in the correct position, so this function do it manualy</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-comment">#backIndex = index - self.videoFrameRate</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">        <tt class="py-comment">#if backIndex&lt;0: backIndex = 0</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-93" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-93', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-94" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.set
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.set
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.set
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.set
+core.utils.tools.RingBuffer.set" class="py-name" href="#" onclick="return doclink('link-94', 'set', 'link-49');">set</a></tt><tt class="py-op">(</tt><tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">cv</tt><tt class="py-op">.</tt><tt class="py-name">CV_CAP_PROP_POS_FRAMES</tt><tt class="py-op">,</tt> <tt class="py-name">index</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">        <tt class="py-comment">#while True:</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">        <tt class="py-comment">#    self.capture.read()</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-comment">#    if self.getCurrentFrame()&gt;=index:</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-comment">#        break</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.getCurrentFrameImage"></a><div id="OTVideoInput.getCurrentFrameImage-def"><a name="L88"></a><tt class="py-lineno"> 88</tt> <a class="py-toggle" href="#" id="OTVideoInput.getCurrentFrameImage-toggle" onclick="return toggle('OTVideoInput.getCurrentFrameImage');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#getCurrentFrameImage">getCurrentFrameImage</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.getCurrentFrameImage-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.getCurrentFrameImage-expanded"><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-name">currentFrame</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-95" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.getCurrentFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.getCurrentFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.getCurrentFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.getCurrentFrame" class="py-name" href="#" onclick="return doclink('link-95', 'getCurrentFrame', 'link-84');">getCurrentFrame</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-op">(</tt><tt class="py-name">success</tt><tt class="py-op">,</tt> <tt class="py-name">img</tt> <tt class="py-op">)</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-96" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.read
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.read
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.read
+core.datatypes.video.OTVideoInputMask.OTVideoInputMask.read
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.read
+core.datatypes.video.OTVideoMask.OTVideoMask.read" class="py-name" href="#" onclick="return doclink('link-96', 'read', 'link-87');">read</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-97" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.setFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.setFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.setFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.setFrame" class="py-name" href="#" onclick="return doclink('link-97', 'setFrame', 'link-89');">setFrame</a></tt><tt class="py-op">(</tt><tt class="py-name">currentFrame</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">img</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.getCurrentFrame"></a><div id="OTVideoInput.getCurrentFrame-def"><a name="L94"></a><tt class="py-lineno"> 94</tt> <a class="py-toggle" href="#" id="OTVideoInput.getCurrentFrame-toggle" onclick="return toggle('OTVideoInput.getCurrentFrame');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#getCurrentFrame">getCurrentFrame</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.getCurrentFrame-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.getCurrentFrame-expanded"><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-98" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-98', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-99" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.get
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.get
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.get
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.get
+core.utils.tools.RingBuffer.get" class="py-name" href="#" onclick="return doclink('link-99', 'get', 'link-47');">get</a></tt><tt class="py-op">(</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">cv</tt><tt class="py-op">.</tt><tt class="py-name">CV_CAP_PROP_POS_FRAMES</tt> <tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt class="py-number">1</tt> </tt>
+</div><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.getTotalFrameSelected"></a><div id="OTVideoInput.getTotalFrameSelected-def"><a name="L97"></a><tt class="py-lineno"> 97</tt> <a class="py-toggle" href="#" id="OTVideoInput.getTotalFrameSelected-toggle" onclick="return toggle('OTVideoInput.getTotalFrameSelected');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#getTotalFrameSelected">getTotalFrameSelected</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.getTotalFrameSelected-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.getTotalFrameSelected-expanded"><a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-100" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.endFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.endFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.endFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.endFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.endFrame" class="py-name" href="#" onclick="return doclink('link-100', 'endFrame', 'link-9');">endFrame</a></tt><tt class="py-op">-</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-101" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.startFrame
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.startFrame
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.startFrame
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.startFrame
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.startFrame" class="py-name" href="#" onclick="return doclink('link-101', 'startFrame', 'link-8');">startFrame</a></tt> </tt>
+</div><a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"> </tt>
+<a name="OTVideoInput.release"></a><div id="OTVideoInput.release-def"><a name="L100"></a><tt class="py-lineno">100</tt> <a class="py-toggle" href="#" id="OTVideoInput.release-toggle" onclick="return toggle('OTVideoInput.release');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#release">release</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTVideoInput.release-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTVideoInput.release-expanded"><a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-102" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-102', 'capture', 'link-0');">capture</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-103" class="py-name"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" class="py-name" href="#" onclick="return doclink('link-103', 'capture', 'link-0');">capture</a></tt><tt class="py-op">.</tt><tt id="link-104" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.release()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#release,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.release()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#release,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.release()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#release,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.release()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#release"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.release
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.release
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.release
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.release" class="py-name" href="#" onclick="return doclink('link-104', 'release', 'link-104');">release</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Jan  8 12:26:17 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

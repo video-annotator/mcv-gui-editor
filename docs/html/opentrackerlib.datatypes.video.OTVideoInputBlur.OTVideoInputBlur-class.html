@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="core-module.html">Package&nbsp;core</a> ::
+        <a href="core.datatypes-module.html">Package&nbsp;datatypes</a> ::
+        <a href="core.datatypes.video-module.html">Package&nbsp;video</a> ::
+        <a href="core.datatypes.video.OTVideoInputBlur-module.html">Module&nbsp;OTVideoInputBlur</a> ::
+        Class&nbsp;OTVideoInputBlur
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class OTVideoInputBlur</h1><p class="nomargin-top"><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_opentrac_5" name="uml_class_diagram_for_opentrac_5">
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#videoFrameTimeInterval" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameTimeInterval" alt="" coords="17,215,308,233"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#startFrame" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.startFrame" alt="" coords="17,233,308,252"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#endFrame" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.endFrame" alt="" coords="17,252,308,271"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#videoFrameRate" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.videoFrameRate" alt="" coords="17,271,308,289"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#__init__" title="x.__init__(...) initializes x; see help(type(x)) for signature" alt="" coords="17,292,308,311"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#read" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.read" alt="" coords="17,311,308,329"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#reopen" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.reopen" alt="" coords="17,329,308,348"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#clone" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.clone" alt="" coords="17,348,308,367"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#init" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.init" alt="" coords="17,367,308,385"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#get" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.get" alt="" coords="17,385,308,404"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#set" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.set" alt="" coords="17,404,308,423"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#setFrame" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.setFrame" alt="" coords="17,423,308,441"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#getCurrentFrameImage" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.getCurrentFrameImage" alt="" coords="17,441,308,460"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#getCurrentFrame" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.getCurrentFrame" alt="" coords="17,460,308,479"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#getTotalFrameSelected" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.getTotalFrameSelected" alt="" coords="17,479,308,497"/>
+<area shape="rect" id="node81" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#release" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.release" alt="" coords="17,497,308,516"/>
+<area shape="rect" id="node1" href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html" title="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur" alt="" coords="5,190,320,522"/>
+<area shape="rect" id="node82" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#capture" title="core.datatypes.video.OTVideoInput.OTVideoInput.capture" alt="" coords="79,31,245,49"/>
+<area shape="rect" id="node82" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#captureFrom" title="core.datatypes.video.OTVideoInput.OTVideoInput.captureFrom" alt="" coords="79,49,245,68"/>
+<area shape="rect" id="node82" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#height" title="core.datatypes.video.OTVideoInput.OTVideoInput.height" alt="" coords="79,68,245,87"/>
+<area shape="rect" id="node82" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#videoMaxMilliseconds" title="core.datatypes.video.OTVideoInput.OTVideoInput.videoMaxMilliseconds" alt="" coords="79,87,245,105"/>
+<area shape="rect" id="node82" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#videoTotalFrames" title="core.datatypes.video.OTVideoInput.OTVideoInput.videoTotalFrames" alt="" coords="79,105,245,124"/>
+<area shape="rect" id="node82" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#width" title="core.datatypes.video.OTVideoInput.OTVideoInput.width" alt="" coords="79,124,245,143"/>
+<area shape="rect" id="node82" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#merge" title="core.datatypes.video.OTVideoInput.OTVideoInput.merge" alt="" coords="79,145,245,164"/>
+<area shape="rect" id="node2" href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html" title="core.datatypes.video.OTVideoInput.OTVideoInput" alt="" coords="67,6,256,170"/>
+</map>
+  <img src="uml_class_diagram_for_opentrac_5.gif" alt='' usemap="#uml_class_diagram_for_opentrac_5" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">videoInput</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">blur</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">kernel</span>=<span class="summary-sig-default">1</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#read" class="summary-sig-name">read</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.read">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#reopen" class="summary-sig-name">reopen</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.reopen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#clone" class="summary-sig-name">clone</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.clone">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#init" class="summary-sig-name">init</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">captureFrom</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.init">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#get" class="summary-sig-name">get</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">flag</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.get">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#set" class="summary-sig-name">set</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">flag</span>,
+        <span class="summary-sig-arg">value</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.set">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#setFrame" class="summary-sig-name">setFrame</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">index</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.setFrame">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#getCurrentFrameImage" class="summary-sig-name">getCurrentFrameImage</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.getCurrentFrameImage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#getCurrentFrame" class="summary-sig-name">getCurrentFrame</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.getCurrentFrame">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#getTotalFrameSelected" class="summary-sig-name">getTotalFrameSelected</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.getTotalFrameSelected">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#release" class="summary-sig-name">release</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.release">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html">OTVideoInput.OTVideoInput</a></code></b>:
+      <code><a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#merge">merge</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_inputvideo"></a><span class="summary-name">_inputvideo</span> = <code title="None">None</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_blur_selected"></a><span class="summary-name">_blur_selected</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_kernelSize"></a><span class="summary-name">_kernelSize</span> = <code title="1">1</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html">OTVideoInput.OTVideoInput</a></code></b>:
+      <code><a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#capture">capture</a></code>,
+      <code><a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#captureFrom">captureFrom</a></code>,
+      <code><a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#height">height</a></code>,
+      <code><a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#videoMaxMilliseconds">videoMaxMilliseconds</a></code>,
+      <code><a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#videoTotalFrames">videoTotalFrames</a></code>,
+      <code><a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#width">width</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#videoFrameTimeInterval" class="summary-name">videoFrameTimeInterval</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#startFrame" class="summary-name">startFrame</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#endFrame" class="summary-name">endFrame</a>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#videoFrameRate" class="summary-name">videoFrameRate</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">videoInput</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">blur</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">kernel</span>=<span class="sig-default">1</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="read"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">read</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.read">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#read">OTVideoInput.OTVideoInput.read</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="reopen"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">reopen</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.reopen">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#reopen">OTVideoInput.OTVideoInput.reopen</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="clone"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">clone</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.clone">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#clone">OTVideoInput.OTVideoInput.clone</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="init"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">init</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">captureFrom</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.init">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#init">OTVideoInput.OTVideoInput.init</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">flag</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.get">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#get">OTVideoInput.OTVideoInput.get</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="set"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">flag</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.set">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#set">OTVideoInput.OTVideoInput.set</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setFrame"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setFrame</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">index</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.setFrame">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#setFrame">OTVideoInput.OTVideoInput.setFrame</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getCurrentFrameImage"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getCurrentFrameImage</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.getCurrentFrameImage">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#getCurrentFrameImage">OTVideoInput.OTVideoInput.getCurrentFrameImage</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getCurrentFrame"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getCurrentFrame</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.getCurrentFrame">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#getCurrentFrame">OTVideoInput.OTVideoInput.getCurrentFrame</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getTotalFrameSelected"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getTotalFrameSelected</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.getTotalFrameSelected">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#getTotalFrameSelected">OTVideoInput.OTVideoInput.getTotalFrameSelected</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="release"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">release</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.datatypes.video.OTVideoInputBlur-pysrc.html#OTVideoInputBlur.release">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.datatypes.video.OTVideoInput.OTVideoInput-class.html#release">OTVideoInput.OTVideoInput.release</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="videoFrameTimeInterval"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">videoFrameTimeInterval</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.videoFrameTimeInterval(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="startFrame"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">startFrame</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.startFrame(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="endFrame"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">endFrame</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.endFrame(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="videoFrameRate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">videoFrameRate</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.videoFrameRate(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Jan  8 12:26:11 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

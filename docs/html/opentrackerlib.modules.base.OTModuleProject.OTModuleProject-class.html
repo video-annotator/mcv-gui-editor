@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>core.modules.base.OTModuleProject.OTModuleProject</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="core-module.html">Package&nbsp;core</a> ::
+        <a href="core.modules-module.html">Package&nbsp;modules</a> ::
+        <a href="core.modules.base-module.html">Package&nbsp;base</a> ::
+        <a href="core.modules.base.OTModuleProject-module.html">Module&nbsp;OTModuleProject</a> ::
+        Class&nbsp;OTModuleProject
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="core.modules.base.OTModuleProject.OTModuleProject-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class OTModuleProject</h1><p class="nomargin-top"><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_opentrac_14" name="uml_class_diagram_for_opentrac_14">
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#modulesOrdered" title="Return all the project modules ordered" alt="" coords="17,127,300,145"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#sqldb" title="Return the database connection" alt="" coords="17,145,300,164"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#controller" title="Return the controller" alt="" coords="17,164,300,183"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#__init__" title="x.__init__(...) initializes x; see help(type(x)) for signature" alt="" coords="17,185,300,204"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#openProject" title="Open a project" alt="" coords="17,204,300,223"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#initDatabases" title="Start databases" alt="" coords="17,223,300,241"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#closeDatabases" title="Close databases" alt="" coords="17,241,300,260"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#addModuleByName" title="Add module by name to the project" alt="" coords="17,260,300,279"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#addModule" title="Add module to the project" alt="" coords="17,279,300,297"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#removeModule" title="Remove module from the project" alt="" coords="17,297,300,316"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#save" title="Save project" alt="" coords="17,316,300,335"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#close" title="OTModule.close reimplementation" alt="" coords="17,335,300,353"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#saveContent" title="OTModule.saveContent reimplementation" alt="" coords="17,353,300,372"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#loadSavedContent" title="OTModule.loadContent reimplementation" alt="" coords="17,372,300,391"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#moduleUpdatedEvent" title="Event called when a project module is updated" alt="" coords="17,391,300,409"/>
+<area shape="rect" id="node139" href="core.modules.base.OTModuleProject.OTModuleProject-class.html#addModuleEvent" title="Event called when a module is added to the project" alt="" coords="17,409,300,428"/>
+<area shape="rect" id="node1" href="core.modules.base.OTModuleProject.OTModuleProject-class.html" title="Implements the project management module" alt="" coords="5,102,312,434"/>
+<area shape="rect" id="node140" href="core.modules.base.OTModule.OTModule-class.html#name" title="core.modules.base.OTModule.OTModule.name" alt="" coords="95,31,221,49"/>
+<area shape="rect" id="node140" href="core.modules.base.OTModule.OTModule-class.html#uid" title="core.modules.base.OTModule.OTModule.uid" alt="" coords="95,49,221,68"/>
+<area shape="rect" id="node2" href="core.modules.base.OTModule.OTModule-class.html" title="Module abstract class implementation" alt="" coords="83,6,232,82"/>
+</map>
+  <img src="uml_class_diagram_for_opentrac_14.gif" alt='' usemap="#uml_class_diagram_for_opentrac_14" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>Implements the project management module</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">controller</span>,
+        <span class="summary-sig-arg">name</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">dir</span>=<span class="summary-sig-default">None</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#openProject" class="summary-sig-name">openProject</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">projectDir</span>,
+        <span class="summary-sig-arg">file</span>)</span><br />
+      Open a project</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.openProject">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="initDatabases"></a><span class="summary-sig-name">initDatabases</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Start databases</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.initDatabases">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="closeDatabases"></a><span class="summary-sig-name">closeDatabases</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Close databases</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.closeDatabases">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#addModuleByName" class="summary-sig-name">addModuleByName</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">moduleName</span>)</span><br />
+      Add module by name to the project</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.addModuleByName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#addModule" class="summary-sig-name">addModule</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">module</span>)</span><br />
+      Add module to the project</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.addModule">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#removeModule" class="summary-sig-name">removeModule</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">module</span>)</span><br />
+      Remove module from the project</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.removeModule">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="save"></a><span class="summary-sig-name">save</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">project_data</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>)</span><br />
+      Save project</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.save">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#close" class="summary-sig-name">close</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      OTModule.close reimplementation</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.close">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#saveContent" class="summary-sig-name">saveContent</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">saver</span>)</span><br />
+      OTModule.saveContent reimplementation</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.saveContent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#loadSavedContent" class="summary-sig-name">loadSavedContent</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">loader</span>)</span><br />
+      OTModule.loadContent reimplementation</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.loadSavedContent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#moduleUpdatedEvent" class="summary-sig-name">moduleUpdatedEvent</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">module</span>)</span><br />
+      Event called when a project module is updated</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.moduleUpdatedEvent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#addModuleEvent" class="summary-sig-name">addModuleEvent</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">module</span>)</span><br />
+      Event called when a module is added to the project</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.addModuleEvent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_controller"></a><span class="summary-name">_controller</span> = <code title="None">None</code><br />
+      modules controller
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_projectDir"></a><span class="summary-name">_projectDir</span> = <code title="None">None</code><br />
+      Project dir
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_modules"></a><span class="summary-name">_modules</span> = <code title="{}"><code class="variable-group">{</code><code class="variable-group">}</code></code><br />
+      Dict of the project modules
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_modulesOrdered"></a><span class="summary-name">_modulesOrdered</span> = <code title="[]"><code class="variable-group">[</code><code class="variable-group">]</code></code><br />
+      List of the project modules ordered
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_sqldb"></a><span class="summary-name">_sqldb</span> = <code title="None">None</code><br />
+      Store the database connection
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModule.OTModule-class.html">OTModule.OTModule</a></code></b> (private):
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#_name" onclick="show_private();">_name</a></code>,
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#_unique_id" onclick="show_private();">_unique_id</a></code>,
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#_version" onclick="show_private();">_version</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="_sqldbname"></a><span class="summary-name">_sqldbname</span> = <code title="None">None</code><br />
+      self._sqldb.exec_(&quot;PRAGMA journal_mode=WAL;&quot;) 
+      self._sqldb.exec_(&quot;PRAGMA cache_size = 65536&quot;) 
+      self._sqldb.exec_(&quot;PRAGMA temp_store = MEMORY&quot;) 
+      self._sqldb.exec_(&quot;PRAGMA journal_mode = OFF&quot;) 
+      self._sqldb.exec_(&quot;PRAGMA locking_mode = UNLOCKED&quot;) 
+      self._sqldb.exec_(&quot;PRAGMA synchronous = OFF&quot;)
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#modulesOrdered" class="summary-name">modulesOrdered</a><br />
+      Return all the project modules ordered
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#sqldb" class="summary-name">sqldb</a><br />
+      Return the database connection
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="core.modules.base.OTModuleProject.OTModuleProject-class.html#controller" class="summary-name">controller</a><br />
+      Return the controller
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="core.modules.base.OTModule.OTModule-class.html">OTModule.OTModule</a></code></b>:
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#name">name</a></code>,
+      <code><a href="core.modules.base.OTModule.OTModule-class.html#uid">uid</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">controller</span>,
+        <span class="sig-arg">name</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">dir</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="openProject"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">openProject</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">projectDir</span>,
+        <span class="sig-arg">file</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.openProject">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Open a project</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>projectDir</code></strong> (String) - Project directory</li>
+        <li><strong class="pname"><code>file</code></strong> (String) - Project file name</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addModuleByName"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addModuleByName</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">moduleName</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.addModuleByName">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add module by name to the project</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>moduleName</code></strong> (String) - Module name</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addModule"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addModule</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">module</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.addModule">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add module to the project</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>module</code></strong> (OTModule) - Module object</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="removeModule"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">removeModule</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">module</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.removeModule">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Remove module from the project</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>module</code></strong> (OTModule) - Module object</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="close"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">close</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.close">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>OTModule.close reimplementation</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="core.modules.base.OTModule.OTModule-class.html#close">OTModule.OTModule.close</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="saveContent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">saveContent</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">saver</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.saveContent">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>OTModule.saveContent reimplementation</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>saver</code></strong> - Dictionary used to store the module information</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="core.modules.base.OTModule.OTModule-class.html#saveContent">OTModule.OTModule.saveContent</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="loadSavedContent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">loadSavedContent</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">loader</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.loadSavedContent">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>OTModule.loadContent reimplementation</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>loader</code></strong> - Dictionary with the stored module information</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="core.modules.base.OTModule.OTModule-class.html#loadSavedContent">OTModule.OTModule.loadSavedContent</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="moduleUpdatedEvent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">moduleUpdatedEvent</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">module</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.moduleUpdatedEvent">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Event called when a project module is updated</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>module</code></strong> (OTModuleProject) - the project was updated</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addModuleEvent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addModuleEvent</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">module</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="core.modules.base.OTModuleProject-pysrc.html#OTModuleProject.addModuleEvent">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Event called when a module is added to the project</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>module</code></strong> (OTModuleProject) - A new module was added to the project</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="modulesOrdered"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">modulesOrdered</h3>
+  <p>Return all the project modules ordered</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.modulesOrdered(<span class="summary-sig-arg">self</span>)</span>
+        - Return all the project modules ordered
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="sqldb"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">sqldb</h3>
+  <p>Return the database connection</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.sqldb(<span class="summary-sig-arg">self</span>)</span>
+        - Return the database connection
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="controller"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">controller</h3>
+  <p>Return the controller</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.controller(<span class="summary-sig-arg">self</span>)</span>
+        - Return the controller
+    </dd>
+    <dt>Set Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.controller(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">value</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Jan  8 12:26:12 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

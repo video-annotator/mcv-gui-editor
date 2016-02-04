@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>core.modules.formcontrols.OTParamList</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="core-module.html">Package&nbsp;core</a> ::
+        <a href="core.modules-module.html">Package&nbsp;modules</a> ::
+        <a href="core.modules.formcontrols-module.html">Package&nbsp;formcontrols</a> ::
+        Module&nbsp;OTParamList
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="core.modules.formcontrols.OTParamList-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="core.modules.formcontrols.OTParamList-module.html">Module core.modules.formcontrols.OTParamList</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">pickle</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">PyQt4</tt> <tt class="py-keyword">import</tt> <tt class="py-name">uic</tt><tt class="py-op">,</tt> <tt class="py-name">QtGui</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#from PyQt4.QtSql import *</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Package core=core-module.html"><a title="core" class="py-name" href="#" onclick="return doclink('link-0', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package core.utils=core.utils-module.html"><a title="core.utils" class="py-name" href="#" onclick="return doclink('link-1', 'utils', 'link-1');">utils</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module core.utils.tools=core.utils.tools-module.html"><a title="core.utils.tools" class="py-name" href="#" onclick="return doclink('link-2', 'tools', 'link-2');">tools</a></tt> <tt class="py-keyword">as</tt> <tt id="link-3" class="py-name"><a title="core.utils.tools" class="py-name" href="#" onclick="return doclink('link-3', 'tools', 'link-2');">tools</a></tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="core" class="py-name" href="#" onclick="return doclink('link-4', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Package core.modules=core.modules-module.html"><a title="core.modules" class="py-name" href="#" onclick="return doclink('link-5', 'modules', 'link-5');">modules</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Package core.modules.formcontrols=core.modules.formcontrols-module.html"><a title="core.modules.formcontrols" class="py-name" href="#" onclick="return doclink('link-6', 'formcontrols', 'link-6');">formcontrols</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Module core.modules.formcontrols.OTControlBase=core.modules.formcontrols.OTControlBase-module.html,Class core.modules.formcontrols.OTControlBase.OTControlBase=core.modules.formcontrols.OTControlBase.OTControlBase-class.html"><a title="core.modules.formcontrols.OTControlBase
+core.modules.formcontrols.OTControlBase.OTControlBase" class="py-name" href="#" onclick="return doclink('link-7', 'OTControlBase', 'link-7');">OTControlBase</a></tt> <tt class="py-keyword">import</tt> <tt id="link-8" class="py-name"><a title="core.modules.formcontrols.OTControlBase
+core.modules.formcontrols.OTControlBase.OTControlBase" class="py-name" href="#" onclick="return doclink('link-8', 'OTControlBase', 'link-7');">OTControlBase</a></tt> </tt>
+<a name="OTParamList"></a><div id="OTParamList-def"><a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt> <a class="py-toggle" href="#" id="OTParamList-toggle" onclick="return toggle('OTParamList');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html">OTParamList</a><tt class="py-op">(</tt><tt class="py-base-class">OTControlBase</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="OTParamList-expanded"><a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="OTParamList.initControl"></a><div id="OTParamList.initControl-def"><a name="L11"></a><tt class="py-lineno"> 11</tt> <a class="py-toggle" href="#" id="OTParamList.initControl-toggle" onclick="return toggle('OTParamList.initControl');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#initControl">initControl</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.initControl-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.initControl-expanded"><a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line">        <tt class="py-name">control_path</tt> <tt class="py-op">=</tt> <tt id="link-9" class="py-name"><a title="core.utils.tools" class="py-name" href="#" onclick="return doclink('link-9', 'tools', 'link-2');">tools</a></tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Function core.utils.tools.getFileInSameDirectory()=core.utils.tools-module.html#getFileInSameDirectory"><a title="core.utils.tools.getFileInSameDirectory" class="py-name" href="#" onclick="return doclink('link-10', 'getFileInSameDirectory', 'link-10');">getFileInSameDirectory</a></tt><tt class="py-op">(</tt><tt class="py-name">__file__</tt><tt class="py-op">,</tt><tt class="py-string">"list.ui"</tt><tt class="py-op">)</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Variable core.controllers.OTModulesController.OTModulesController._form=core.controllers.OTModulesController.OTModulesController-class.html#_form,Variable core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form=core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html#_form,Variable core.modules.formcontrols.OTControlBase.OTControlBase._form=core.modules.formcontrols.OTControlBase.OTControlBase-class.html#_form"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-11', '_form', 'link-11');">_form</a></tt> <tt class="py-op">=</tt> <tt class="py-name">uic</tt><tt class="py-op">.</tt><tt class="py-name">loadUi</tt><tt class="py-op">(</tt> <tt class="py-name">control_path</tt> <tt class="py-op">)</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-12', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method core.modules.formcontrols.OTParamList.OTParamList.currentCellChanged()=core.modules.formcontrols.OTParamList.OTParamList-class.html#currentCellChanged"><a title="core.modules.formcontrols.OTParamList.OTParamList.currentCellChanged" class="py-name" href="#" onclick="return doclink('link-13', 'currentCellChanged', 'link-13');">currentCellChanged</a></tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method core.modules.formcontrols.OTParamList.OTParamList.tableWidgetCellChanged()=core.modules.formcontrols.OTParamList.OTParamList-class.html#tableWidgetCellChanged"><a title="core.modules.formcontrols.OTParamList.OTParamList.tableWidgetCellChanged" class="py-name" href="#" onclick="return doclink('link-14', 'tableWidgetCellChanged', 'link-14');">tableWidgetCellChanged</a></tt> <tt class="py-op">)</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-15', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Method core.modules.formcontrols.OTParamList.OTParamList.itemSelectionChanged()=core.modules.formcontrols.OTParamList.OTParamList-class.html#itemSelectionChanged"><a title="core.modules.formcontrols.OTParamList.OTParamList.itemSelectionChanged" class="py-name" href="#" onclick="return doclink('link-16', 'itemSelectionChanged', 'link-16');">itemSelectionChanged</a></tt><tt class="py-op">.</tt><tt class="py-name">connect</tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Method core.modules.formcontrols.OTParamList.OTParamList.tableWidgetItemSelectionChanged()=core.modules.formcontrols.OTParamList.OTParamList-class.html#tableWidgetItemSelectionChanged"><a title="core.modules.formcontrols.OTParamList.OTParamList.tableWidgetItemSelectionChanged" class="py-name" href="#" onclick="return doclink('link-17', 'tableWidgetItemSelectionChanged', 'link-17');">tableWidgetItemSelectionChanged</a></tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="OTParamList.tableWidgetCellChanged"></a><div id="OTParamList.tableWidgetCellChanged-def"><a name="L18"></a><tt class="py-lineno"> 18</tt> <a class="py-toggle" href="#" id="OTParamList.tableWidgetCellChanged-toggle" onclick="return toggle('OTParamList.tableWidgetCellChanged');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#tableWidgetCellChanged">tableWidgetCellChanged</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">nextRow</tt><tt class="py-op">,</tt> <tt class="py-param">nextCol</tt><tt class="py-op">,</tt> <tt class="py-param">previousRow</tt><tt class="py-op">,</tt> <tt class="py-param">previousCol</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.tableWidgetCellChanged-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.tableWidgetCellChanged-expanded"><a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="core.modules.formcontrols.OTParamList.OTParamList.currentCellChanged" class="py-name" href="#" onclick="return doclink('link-18', 'currentCellChanged', 'link-13');">currentCellChanged</a></tt><tt class="py-op">(</tt><tt class="py-name">nextRow</tt><tt class="py-op">,</tt> <tt class="py-name">nextCol</tt><tt class="py-op">,</tt> <tt class="py-name">previousRow</tt><tt class="py-op">,</tt> <tt class="py-name">previousCol</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"> </tt>
+<a name="OTParamList.tableWidgetItemSelectionChanged"></a><div id="OTParamList.tableWidgetItemSelectionChanged-def"><a name="L21"></a><tt class="py-lineno"> 21</tt> <a class="py-toggle" href="#" id="OTParamList.tableWidgetItemSelectionChanged-toggle" onclick="return toggle('OTParamList.tableWidgetItemSelectionChanged');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#tableWidgetItemSelectionChanged">tableWidgetItemSelectionChanged</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.tableWidgetItemSelectionChanged-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.tableWidgetItemSelectionChanged-expanded"><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="core.modules.formcontrols.OTParamList.OTParamList.itemSelectionChanged" class="py-name" href="#" onclick="return doclink('link-19', 'itemSelectionChanged', 'link-16');">itemSelectionChanged</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"> </tt>
+<a name="OTParamList.itemSelectionChanged"></a><div id="OTParamList.itemSelectionChanged-def"><a name="L24"></a><tt class="py-lineno"> 24</tt> <a class="py-toggle" href="#" id="OTParamList.itemSelectionChanged-toggle" onclick="return toggle('OTParamList.itemSelectionChanged');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#itemSelectionChanged">itemSelectionChanged</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt><tt class="py-keyword">pass</tt> </tt>
+</div><a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"> </tt>
+<a name="OTParamList.currentCellChanged"></a><div id="OTParamList.currentCellChanged-def"><a name="L26"></a><tt class="py-lineno"> 26</tt> <a class="py-toggle" href="#" id="OTParamList.currentCellChanged-toggle" onclick="return toggle('OTParamList.currentCellChanged');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#currentCellChanged">currentCellChanged</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">nextRow</tt><tt class="py-op">,</tt> <tt class="py-param">nextCol</tt><tt class="py-op">,</tt> <tt class="py-param">previousRow</tt><tt class="py-op">,</tt> <tt class="py-param">previousCol</tt><tt class="py-op">)</tt><tt class="py-op">:</tt><tt class="py-keyword">pass</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line">        </tt>
+<a name="OTParamList.clear"></a><div id="OTParamList.clear-def"><a name="L28"></a><tt class="py-lineno"> 28</tt> <a class="py-toggle" href="#" id="OTParamList.clear-toggle" onclick="return toggle('OTParamList.clear');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#clear">clear</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.clear-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.clear-expanded"><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-20', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name" targets="Method core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.clear()=core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList-class.html#clear,Method core.modules.formcontrols.OTParamList.OTParamList.clear()=core.modules.formcontrols.OTParamList.OTParamList-class.html#clear"><a title="core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.clear
+core.modules.formcontrols.OTParamList.OTParamList.clear" class="py-name" href="#" onclick="return doclink('link-21', 'clear', 'link-21');">clear</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-22', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">setColumnCount</tt><tt class="py-op">(</tt><tt class="py-number">3</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-23', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">setRowCount</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="OTParamList.__add__"></a><div id="OTParamList.__add__-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="OTParamList.__add__-toggle" onclick="return toggle('OTParamList.__add__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#__add__">__add__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">other</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.__add__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.__add__-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">         </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-name">index</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-24', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">rowCount</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-25', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">insertRow</tt><tt class="py-op">(</tt> <tt class="py-name">index</tt> <tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-26', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">setColumnCount</tt><tt class="py-op">(</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">other</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">other</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-27', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">setItem</tt><tt class="py-op">(</tt> <tt class="py-name">index</tt><tt class="py-op">,</tt> <tt class="py-name">i</tt><tt class="py-op">,</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QTableWidgetItem</tt><tt class="py-op">(</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">other</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-28', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">resizeColumnsToContents</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="OTParamList.__sub__"></a><div id="OTParamList.__sub__-def"><a name="L44"></a><tt class="py-lineno"> 44</tt> <a class="py-toggle" href="#" id="OTParamList.__sub__-toggle" onclick="return toggle('OTParamList.__sub__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#__sub__">__sub__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">other</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.__sub__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.__sub__-expanded"><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">other</tt><tt class="py-op">,</tt> <tt class="py-name">int</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">other</tt> <tt class="py-op">&lt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">                <tt class="py-name">indexToRemove</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-29', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">currentRow</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">            <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">                <tt class="py-name">indexToRemove</tt> <tt class="py-op">=</tt> <tt class="py-name">other</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-30', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Method core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.removeRow()=core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery-class.html#removeRow"><a title="core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.removeRow" class="py-name" href="#" onclick="return doclink('link-31', 'removeRow', 'link-31');">removeRow</a></tt><tt class="py-op">(</tt><tt class="py-name">indexToRemove</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt> </tt>
+</div><a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"> </tt>
+<a name="OTParamList.setValue"></a><div id="OTParamList.setValue-def"><a name="L54"></a><tt class="py-lineno"> 54</tt> <a class="py-toggle" href="#" id="OTParamList.setValue-toggle" onclick="return toggle('OTParamList.setValue');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#setValue">setValue</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">column</tt><tt class="py-op">,</tt> <tt class="py-param">row</tt><tt class="py-op">,</tt> <tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.setValue-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.setValue-expanded"><a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-32', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">item</tt><tt class="py-op">(</tt><tt class="py-name">row</tt><tt class="py-op">,</tt><tt class="py-name">column</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">setText</tt><tt class="py-op">(</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt id="link-33" class="py-name" targets="Variable core.modules.formcontrols.OTControlBase.OTControlBase.value=core.modules.formcontrols.OTControlBase.OTControlBase-class.html#value,Variable core.modules.formcontrols.OTParamBase.OTParamBase.value=core.modules.formcontrols.OTParamBase.OTParamBase-class.html#value,Variable core.modules.formcontrols.OTParamButton.OTParamButton.value=core.modules.formcontrols.OTParamButton.OTParamButton-class.html#value,Variable core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value=core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox-class.html#value,Variable core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value=core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList-class.html#value,Variable core.modules.formcontrols.OTParamCombo.OTParamCombo.value=core.modules.formcontrols.OTParamCombo.OTParamCombo-class.html#value,Variable core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value=core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery-class.html#value,Variable core.modules.formcontrols.OTParamImage.OTParamImage.value=core.modules.formcontrols.OTParamImage.OTParamImage-class.html#value,Variable core.modules.formcontrols.OTParamList.OTParamList.value=core.modules.formcontrols.OTParamList.OTParamList-class.html#value,Variable core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value=core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection-class.html#value,Variable core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value=core.modules.formcontrols.OTParamPlayer.OTParamPlayer-class.html#value,Variable core.modules.formcontrols.OTParamProgress.OTParamProgress.value=core.modules.formcontrols.OTParamProgress.OTParamProgress-class.html#value,Variable core.modules.formcontrols.OTParamSlider.OTParamSlider.value=core.modules.formcontrols.OTParamSlider.OTParamSlider-class.html#value,Variable core.modules.formcontrols.OTParamText.OTParamText.value=core.modules.formcontrols.OTParamText.OTParamText-class.html#value,Variable core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value=core.modules.formcontrols.OTParamTextArea.OTParamTextArea-class.html#value,Variable core.modules.formcontrols.OTParamToggle.OTParamToggle.value=core.modules.formcontrols.OTParamToggle.OTParamToggle-class.html#value"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-33', 'value', 'link-33');">value</a></tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"> </tt>
+<a name="OTParamList.getValue"></a><div id="OTParamList.getValue-def"><a name="L57"></a><tt class="py-lineno"> 57</tt> <a class="py-toggle" href="#" id="OTParamList.getValue-toggle" onclick="return toggle('OTParamList.getValue');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#getValue">getValue</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">column</tt><tt class="py-op">,</tt> <tt class="py-param">row</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.getValue-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.getValue-expanded"><a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-34', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">item</tt><tt class="py-op">(</tt><tt class="py-name">row</tt><tt class="py-op">,</tt><tt class="py-name">column</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name" targets="Variable core.modules.formcontrols.OTParamCombo.OTParamCombo.text=core.modules.formcontrols.OTParamCombo.OTParamCombo-class.html#text"><a title="core.modules.formcontrols.OTParamCombo.OTParamCombo.text" class="py-name" href="#" onclick="return doclink('link-35', 'text', 'link-35');">text</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">    <tt class="py-comment">############################################################################</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">    <tt class="py-comment">############ Properties ####################################################</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">    <tt class="py-comment">############################################################################</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="OTParamList.selectEntireRow"></a><div id="OTParamList.selectEntireRow-def"><a name="L65"></a><tt class="py-lineno"> 65</tt> <a class="py-toggle" href="#" id="OTParamList.selectEntireRow-toggle" onclick="return toggle('OTParamList.selectEntireRow');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#selectEntireRow">selectEntireRow</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>  </tt>
+</div><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-36', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">selectionBehavior</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">selectEntireRow</tt><tt class="py-op">.</tt><tt class="py-name">setter</tt> </tt>
+<a name="OTParamList.selectEntireRow"></a><div id="OTParamList.selectEntireRow-def"><a name="L69"></a><tt class="py-lineno"> 69</tt> <a class="py-toggle" href="#" id="OTParamList.selectEntireRow-toggle" onclick="return toggle('OTParamList.selectEntireRow');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#selectEntireRow">selectEntireRow</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>  </tt>
+</div><a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">        <tt class="py-keyword">print</tt> <tt id="link-37" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-37', 'value', 'link-33');">value</a></tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-38" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-38', 'value', 'link-33');">value</a></tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-39', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">setSelectionBehavior</tt><tt class="py-op">(</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QAbstractItemView</tt><tt class="py-op">.</tt><tt class="py-name">SelectRows</tt> <tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-40', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">setSelectionBehavior</tt><tt class="py-op">(</tt> <tt class="py-name">QtGui</tt><tt class="py-op">.</tt><tt class="py-name">QAbstractItemView</tt><tt class="py-op">.</tt><tt class="py-name">SelectItems</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="OTParamList.count"></a><div id="OTParamList.count-def"><a name="L75"></a><tt class="py-lineno"> 75</tt> <a class="py-toggle" href="#" id="OTParamList.count-toggle" onclick="return toggle('OTParamList.count');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#count">count</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-41" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-41', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">rowCount</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="OTParamList.value"></a><div id="OTParamList.value-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="OTParamList.value-toggle" onclick="return toggle('OTParamList.value');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#value">value</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.value-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.value-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-name">results</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">row</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-42', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">rowCount</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">            <tt class="py-name">r</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">            <tt class="py-keyword">for</tt> <tt class="py-name">col</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-43', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">columnCount</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">                    <tt class="py-name">r</tt><tt class="py-op">.</tt><tt id="link-44" class="py-name" targets="Method core.utils.tools.RingBuffer.append()=core.utils.tools.RingBuffer-class.html#append"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-44', 'append', 'link-44');">append</a></tt><tt class="py-op">(</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-45" class="py-name" targets="Method core.modules.formcontrols.OTParamList.OTParamList.getValue()=core.modules.formcontrols.OTParamList.OTParamList-class.html#getValue"><a title="core.modules.formcontrols.OTParamList.OTParamList.getValue" class="py-name" href="#" onclick="return doclink('link-45', 'getValue', 'link-45');">getValue</a></tt><tt class="py-op">(</tt><tt class="py-name">col</tt><tt class="py-op">,</tt> <tt class="py-name">row</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">                <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">                    <tt class="py-name">r</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-46', 'append', 'link-44');">append</a></tt><tt class="py-op">(</tt><tt class="py-string">""</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">            <tt class="py-name">results</tt><tt class="py-op">.</tt><tt id="link-47" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-47', 'append', 'link-44');">append</a></tt><tt class="py-op">(</tt><tt class="py-name">r</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">results</tt> </tt>
+</div><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">     </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">value</tt><tt class="py-op">.</tt><tt class="py-name">setter</tt> </tt>
+<a name="OTParamList.value"></a><div id="OTParamList.value-def"><a name="L91"></a><tt class="py-lineno"> 91</tt> <a class="py-toggle" href="#" id="OTParamList.value-toggle" onclick="return toggle('OTParamList.value');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#value">value</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">value</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.value-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.value-expanded"><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">row</tt> <tt class="py-keyword">in</tt> <tt id="link-48" class="py-name"><a title="core.modules.formcontrols.OTControlBase.OTControlBase.value
+core.modules.formcontrols.OTParamBase.OTParamBase.value
+core.modules.formcontrols.OTParamButton.OTParamButton.value
+core.modules.formcontrols.OTParamCheckBox.OTParamCheckBox.value
+core.modules.formcontrols.OTParamCheckBoxList.OTParamCheckBoxList.value
+core.modules.formcontrols.OTParamCombo.OTParamCombo.value
+core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.value
+core.modules.formcontrols.OTParamImage.OTParamImage.value
+core.modules.formcontrols.OTParamList.OTParamList.value
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.value
+core.modules.formcontrols.OTParamPlayer.OTParamPlayer.value
+core.modules.formcontrols.OTParamProgress.OTParamProgress.value
+core.modules.formcontrols.OTParamSlider.OTParamSlider.value
+core.modules.formcontrols.OTParamText.OTParamText.value
+core.modules.formcontrols.OTParamTextArea.OTParamTextArea.value
+core.modules.formcontrols.OTParamToggle.OTParamToggle.value" class="py-name" href="#" onclick="return doclink('link-48', 'value', 'link-33');">value</a></tt><tt class="py-op">:</tt> <tt class="py-name">self</tt> <tt class="py-op">+=</tt> <tt class="py-name">row</tt> </tt>
+</div><a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="OTParamList.mouseSelectedRowsIndexes"></a><div id="OTParamList.mouseSelectedRowsIndexes-def"><a name="L95"></a><tt class="py-lineno"> 95</tt> <a class="py-toggle" href="#" id="OTParamList.mouseSelectedRowsIndexes-toggle" onclick="return toggle('OTParamList.mouseSelectedRowsIndexes');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#mouseSelectedRowsIndexes">mouseSelectedRowsIndexes</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.mouseSelectedRowsIndexes-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.mouseSelectedRowsIndexes-expanded"><a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">        <tt class="py-name">result</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">index</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-49" class="py-name"><a title="core.controllers.OTModulesController.OTModulesController._form
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem._form
+core.modules.formcontrols.OTControlBase.OTControlBase._form" class="py-name" href="#" onclick="return doclink('link-49', '_form', 'link-11');">_form</a></tt><tt class="py-op">.</tt><tt class="py-name">tableWidget</tt><tt class="py-op">.</tt><tt class="py-name">selectedIndexes</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>  </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">            <tt class="py-name">result</tt><tt class="py-op">.</tt><tt id="link-50" class="py-name"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-50', 'append', 'link-44');">append</a></tt><tt class="py-op">(</tt> <tt class="py-name">index</tt><tt class="py-op">.</tt><tt class="py-name">row</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">list</tt><tt class="py-op">(</tt> <tt id="link-51" class="py-name" targets="Method core.datatypes.video.OTVideoInput.OTVideoInput.set()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#set,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.set()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#set,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.set()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#set,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.set()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#set,Method core.utils.tools.RingBuffer.set()=core.utils.tools.RingBuffer-class.html#set"><a title="core.datatypes.video.OTVideoInput.OTVideoInput.set
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.set
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.set
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.set
+core.utils.tools.RingBuffer.set" class="py-name" href="#" onclick="return doclink('link-51', 'set', 'link-51');">set</a></tt><tt class="py-op">(</tt><tt class="py-name">result</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+</div><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">    <tt class="py-decorator">@</tt><tt class="py-decorator">property</tt> </tt>
+<a name="OTParamList.mouseSelectedRowIndex"></a><div id="OTParamList.mouseSelectedRowIndex-def"><a name="L102"></a><tt class="py-lineno">102</tt> <a class="py-toggle" href="#" id="OTParamList.mouseSelectedRowIndex-toggle" onclick="return toggle('OTParamList.mouseSelectedRowIndex');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.modules.formcontrols.OTParamList.OTParamList-class.html#mouseSelectedRowIndex">mouseSelectedRowIndex</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTParamList.mouseSelectedRowIndex-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="OTParamList.mouseSelectedRowIndex-expanded"><a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">        <tt class="py-name">indexes</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-52" class="py-name" targets="Variable core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.mouseSelectedRowsIndexes=core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery-class.html#mouseSelectedRowsIndexes,Variable core.modules.formcontrols.OTParamList.OTParamList.mouseSelectedRowsIndexes=core.modules.formcontrols.OTParamList.OTParamList-class.html#mouseSelectedRowsIndexes"><a title="core.modules.formcontrols.OTParamDBQuery.OTParamDBQuery.mouseSelectedRowsIndexes
+core.modules.formcontrols.OTParamList.OTParamList.mouseSelectedRowsIndexes" class="py-name" href="#" onclick="return doclink('link-52', 'mouseSelectedRowsIndexes', 'link-52');">mouseSelectedRowsIndexes</a></tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">indexes</tt><tt class="py-op">)</tt><tt class="py-op">&gt;</tt><tt class="py-number">0</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">indexes</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+</div></div><a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Jan  8 12:26:16 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

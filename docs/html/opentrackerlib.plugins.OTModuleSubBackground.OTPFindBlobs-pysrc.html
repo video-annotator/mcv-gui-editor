@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>core.plugins.OTModuleSubBackground.OTPFindBlobs</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="core-module.html">Package&nbsp;core</a> ::
+        <a href="core.plugins-module.html">Package&nbsp;plugins</a> ::
+        <a href="core.plugins.OTModuleSubBackground-module.html">Package&nbsp;OTModuleSubBackground</a> ::
+        Module&nbsp;OTPFindBlobs
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="core.plugins.OTModuleSubBackground.OTPFindBlobs-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="core.plugins.OTModuleSubBackground.OTPFindBlobs-module.html">Module core.plugins.OTModuleSubBackground.OTPFindBlobs</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">cv2</tt><tt class="py-op">,</tt> <tt class="py-name">time</tt><tt class="py-op">,</tt> <tt class="py-name">itertools</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">numpy</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">math</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package core=core-module.html"><a title="core" class="py-name" href="#" onclick="return doclink('link-0', 'core', 'link-0');">core</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package core.controllers=core.controllers-module.html"><a title="core.controllers" class="py-name" href="#" onclick="return doclink('link-1', 'controllers', 'link-1');">controllers</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module core.controllers.OTPBase=core.controllers.OTPBase-module.html,Class core.controllers.OTPBase.OTPBase=core.controllers.OTPBase.OTPBase-class.html"><a title="core.controllers.OTPBase
+core.controllers.OTPBase.OTPBase" class="py-name" href="#" onclick="return doclink('link-2', 'OTPBase', 'link-2');">OTPBase</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name"><a title="core.controllers.OTPBase
+core.controllers.OTPBase.OTPBase" class="py-name" href="#" onclick="return doclink('link-3', 'OTPBase', 'link-2');">OTPBase</a></tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="Blob"></a><div id="Blob-def"><a name="L8"></a><tt class="py-lineno"> 8</tt> <a class="py-toggle" href="#" id="Blob-toggle" onclick="return toggle('Blob');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="core.plugins.OTModuleSubBackground.OTPFindBlobs.Blob-class.html">Blob</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt>  </tt>
+</div><a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"> </tt>
+<a name="Blob.draw"></a><div id="Blob.draw-def"><a name="L11"></a><tt class="py-lineno">11</tt> <a class="py-toggle" href="#" id="Blob.draw-toggle" onclick="return toggle('Blob.draw');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.plugins.OTModuleSubBackground.OTPFindBlobs.Blob-class.html#draw">draw</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">frame</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Blob.draw-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Blob.draw-expanded"><a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">        <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">polylines</tt><tt class="py-op">(</tt><tt class="py-name">frame</tt><tt class="py-op">,</tt> <tt class="py-name">array</tt><tt class="py-op">(</tt> <tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">_contour</tt><tt class="py-op">]</tt> <tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">True</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-number">255</tt><tt class="py-op">,</tt><tt class="py-number">255</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-number">2</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"> </tt>
+<a name="OTPFindBlobs"></a><div id="OTPFindBlobs-def"><a name="L15"></a><tt class="py-lineno">15</tt> <a class="py-toggle" href="#" id="OTPFindBlobs-toggle" onclick="return toggle('OTPFindBlobs');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs-class.html">OTPFindBlobs</a><tt class="py-op">(</tt><tt class="py-base-class">OTPBase</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTPFindBlobs-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="OTPFindBlobs-expanded"><a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">    <tt id="link-4" class="py-name" targets="Variable core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs._param_min_area=core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs-class.html#_param_min_area,Variable core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs._param_min_area=core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs-class.html#_param_min_area,Variable core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs._param_min_area=core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs-class.html#_param_min_area"><a title="core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs._param_min_area
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs._param_min_area
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs._param_min_area" class="py-name" href="#" onclick="return doclink('link-4', '_param_min_area', 'link-4');">_param_min_area</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">    <tt id="link-5" class="py-name" targets="Variable core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs._param_max_area=core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs-class.html#_param_max_area,Variable core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs._param_max_area=core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs-class.html#_param_max_area,Variable core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs._param_max_area=core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs-class.html#_param_max_area"><a title="core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs._param_max_area
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs._param_max_area
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs._param_max_area" class="py-name" href="#" onclick="return doclink('link-5', '_param_max_area', 'link-5');">_param_max_area</a></tt> <tt class="py-op">=</tt> <tt class="py-number">1000</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">     </tt>
+<a name="OTPFindBlobs.__init__"></a><div id="OTPFindBlobs.__init__-def"><a name="L20"></a><tt class="py-lineno">20</tt> <a class="py-toggle" href="#" id="OTPFindBlobs.__init__-toggle" onclick="return toggle('OTPFindBlobs.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-op">**</tt><tt class="py-param">kwargs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTPFindBlobs.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="OTPFindBlobs.__init__-expanded"><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-6" class="py-name" targets="Module core.plugins.OTModuleBlobsFilter.OTPFindBlobs=core.plugins.OTModuleBlobsFilter.OTPFindBlobs-module.html,Class core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs=core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs-class.html,Module core.plugins.OTModuleColorFilter.OTPFindBlobs=core.plugins.OTModuleColorFilter.OTPFindBlobs-module.html,Class core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs=core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs-class.html,Module core.plugins.OTModuleSubBackground.OTPFindBlobs=core.plugins.OTModuleSubBackground.OTPFindBlobs-module.html,Class core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs=core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs-class.html"><a title="core.plugins.OTModuleBlobsFilter.OTPFindBlobs
+core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs
+core.plugins.OTModuleColorFilter.OTPFindBlobs
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs
+core.plugins.OTModuleSubBackground.OTPFindBlobs
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs" class="py-name" href="#" onclick="return doclink('link-6', 'OTPFindBlobs', 'link-6');">OTPFindBlobs</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method core.controllers.OTModulesController.OTModulesController.__init__()=core.controllers.OTModulesController.OTModulesController-class.html#__init__,Method core.controllers.OTPBase.OTPBase.__init__()=core.controllers.OTPBase.OTPBase-class.html#__init__,Method core.controllers.OTProjectViewer.OTProjectViewer.__init__()=core.controllers.OTProjectViewer.OTProjectViewer-class.html#__init__,Method core.controllers.OTProjectViewerModulesListWidget.OTProjectViewerModulesListWidget.__init__()=core.controllers.OTProjectViewerModulesListWidget.OTProjectViewerModulesListWidget-class.html#__init__,Method core.datatypes.video.OTVideoInput.OTVideoInput.__init__()=core.datatypes.video.OTVideoInput.OTVideoInput-class.html#__init__,Method core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.__init__()=core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur-class.html#__init__,Method core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.__init__()=core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter-class.html#__init__,Method core.datatypes.video.OTVideoInputMask.OTVideoInputMask.__init__()=core.datatypes.video.OTVideoInputMask.OTVideoInputMask-class.html#__init__,Method core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.__init__()=core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea-class.html#__init__,Method core.datatypes.video.OTVideoMask.OTVideoMask.__init__()=core.datatypes.video.OTVideoMask.OTVideoMask-class.html#__init__,Method core.modules.base.OTModule.OTModule.__init__()=core.modules.base.OTModule.OTModule-class.html#__init__,Method core.modules.base.OTModuleAutoForm.OTModuleAutoForm.__init__()=core.modules.base.OTModuleAutoForm.OTModuleAutoForm-class.html#__init__,Method core.modules.base.OTModulePlugin.OTModulePlugin.__init__()=core.modules.base.OTModulePlugin.OTModulePlugin-class.html#__init__,Method core.modules.base.OTModuleProject.OTModuleProject.__init__()=core.modules.base.OTModuleProject.OTModuleProject-class.html#__init__,Method core.modules.base.OTModuleProjectItem.OTModuleProjectItem.__init__()=core.modules.base.OTModuleProjectItem.OTModuleProjectItem-class.html#__init__,Method core.modules.formcontrols.OTControlBase.OTControlBase.__init__()=core.modules.formcontrols.OTControlBase.OTControlBase-class.html#__init__,Method core.modules.formcontrols.OTParamArenas.OTParamArenas.__init__()=core.modules.formcontrols.OTParamArenas.OTParamArenas-class.html#__init__,Method core.modules.formcontrols.OTParamBackground.OTParamBackground.__init__()=core.modules.formcontrols.OTParamBackground.OTParamBackground-class.html#__init__,Method core.modules.formcontrols.OTParamBase.OTParamBase.__init__()=core.modules.formcontrols.OTParamBase.OTParamBase-class.html#__init__,Method core.modules.formcontrols.OTParamDBQuery.SelectedCellDelegate.__init__()=core.modules.formcontrols.OTParamDBQuery.SelectedCellDelegate-class.html#__init__,Method core.modules.formcontrols.OTParamGeometry.OTParamGeometry.__init__()=core.modules.formcontrols.OTParamGeometry.OTParamGeometry-class.html#__init__,Method core.modules.formcontrols.OTParamImage.ImageGLWidget.__init__()=core.modules.formcontrols.OTParamImage.ImageGLWidget-class.html#__init__,Method core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.__init__()=core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection-class.html#__init__,Method core.modules.formcontrols.OTParamPlayer.VideoGLWidget.__init__()=core.modules.formcontrols.OTParamPlayer.VideoGLWidget-class.html#__init__,Method core.modules.formcontrols.OTParamPositions.OTParamPositions.__init__()=core.modules.formcontrols.OTParamPositions.OTParamPositions-class.html#__init__,Method core.modules.formcontrols.OTParamProgress.OTParamProgress.__init__()=core.modules.formcontrols.OTParamProgress.OTParamProgress-class.html#__init__,Method core.modules.formcontrols.OTParamResults.OTParamResults.__init__()=core.modules.formcontrols.OTParamResults.OTParamResults-class.html#__init__,Method core.modules.formcontrols.OTParamSlider.OTParamSlider.__init__()=core.modules.formcontrols.OTParamSlider.OTParamSlider-class.html#__init__,Method core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput.__init__()=core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput-class.html#__init__,Method core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.__init__()=core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions%27.OTModuleAdjustPositions-class.html#__init__,Method core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector.__init__()=core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector-class.html#__init__,Method core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.__init__()=core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc%27.OTModuleBackgroundCalc-class.html#__init__,Method core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.__init__()=core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector-class.html#__init__,Method core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.__init__()=core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.__init__()=core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter%27.OTModuleBlobsFilter-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.__init__()=core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.__init__()=core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.__init__()=core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.__init__()=core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__()=core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.__init__()=core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs-class.html#__init__,Method core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.__init__()=core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage-class.html#__init__,Method core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.EnergeticObject.__init__()=core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions%27.EnergeticObject-class.html#__init__,Method core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.__init__()=core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions%27.OTModuleClusterObjectsPositions-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.__init__()=core.plugins.OTModuleColorFilter.OTModuleColorFilter%27.OTModuleColorFilter-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.__init__()=core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.__init__()=core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.__init__()=core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.__init__()=core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.__init__()=core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.__init__()=core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.__init__()=core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground-class.html#__init__,Method core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__()=core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#__init__,Method core.plugins.OTModuleGeometry.OTModuleGeometry'.OTModuleGeometry.__init__()=core.plugins.OTModuleGeometry.OTModuleGeometry%27.OTModuleGeometry-class.html#__init__,Method core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry.__init__()=core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry-class.html#__init__,Method core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.__init__()=core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry%27.OTModuleMaskFromGeometry-class.html#__init__,Method core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.__init__()=core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry-class.html#__init__,Method core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin'.OTModuleResultsPlugin.__init__()=core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin%27.OTModuleResultsPlugin-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.__init__()=core.plugins.OTModuleSubBackground.OTModuleSubBackground%27.OTModuleSubBackground-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur.__init__()=core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter.__init__()=core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs.__init__()=core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground.__init__()=core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground-class.html#__init__,Method core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__()=core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#__init__,Method core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo.__init__()=core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo-class.html#__init__,Method core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.__init__()=core.plugins.OTModuleVideoInput.OTModuleVideoInput%27.OTModuleVideoInput-class.html#__init__,Method core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.__init__()=core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo-class.html#__init__,Method core.utils.tools.RingBuffer.__init__()=core.utils.tools.RingBuffer-class.html#__init__"><a title="core.controllers.OTModulesController.OTModulesController.__init__
+core.controllers.OTPBase.OTPBase.__init__
+core.controllers.OTProjectViewer.OTProjectViewer.__init__
+core.controllers.OTProjectViewerModulesListWidget.OTProjectViewerModulesListWidget.__init__
+core.datatypes.video.OTVideoInput.OTVideoInput.__init__
+core.datatypes.video.OTVideoInputBlur.OTVideoInputBlur.__init__
+core.datatypes.video.OTVideoInputColorFilter.OTVideoInputColorFilter.__init__
+core.datatypes.video.OTVideoInputMask.OTVideoInputMask.__init__
+core.datatypes.video.OTVideoInputMaskByArea.OTVideoInputMaskByArea.__init__
+core.datatypes.video.OTVideoMask.OTVideoMask.__init__
+core.modules.base.OTModule.OTModule.__init__
+core.modules.base.OTModuleAutoForm.OTModuleAutoForm.__init__
+core.modules.base.OTModulePlugin.OTModulePlugin.__init__
+core.modules.base.OTModuleProject.OTModuleProject.__init__
+core.modules.base.OTModuleProjectItem.OTModuleProjectItem.__init__
+core.modules.formcontrols.OTControlBase.OTControlBase.__init__
+core.modules.formcontrols.OTParamArenas.OTParamArenas.__init__
+core.modules.formcontrols.OTParamBackground.OTParamBackground.__init__
+core.modules.formcontrols.OTParamBase.OTParamBase.__init__
+core.modules.formcontrols.OTParamDBQuery.SelectedCellDelegate.__init__
+core.modules.formcontrols.OTParamGeometry.OTParamGeometry.__init__
+core.modules.formcontrols.OTParamImage.ImageGLWidget.__init__
+core.modules.formcontrols.OTParamModuleConnection.OTParamModuleConnection.__init__
+core.modules.formcontrols.OTParamPlayer.VideoGLWidget.__init__
+core.modules.formcontrols.OTParamPositions.OTParamPositions.__init__
+core.modules.formcontrols.OTParamProgress.OTParamProgress.__init__
+core.modules.formcontrols.OTParamResults.OTParamResults.__init__
+core.modules.formcontrols.OTParamSlider.OTParamSlider.__init__
+core.modules.formcontrols.OTParamVideoInput.OTParamVideoInput.__init__
+core.plugins.OTModuleAdjustPositions.OTModuleAdjustPositions'.OTModuleAdjustPositions.__init__
+core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector.__init__
+core.plugins.OTModuleBackgroundCalc.OTModuleBackgroundCalc'.OTModuleBackgroundCalc.__init__
+core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.__init__
+core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleBlobsFilter.OTModuleBlobsFilter'.OTModuleBlobsFilter.__init__
+core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.__init__
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.__init__
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.EnergeticObject.__init__
+core.plugins.OTModuleClusterObjectsPositions.OTModuleClusterObjectsPositions'.OTModuleClusterObjectsPositions.__init__
+core.plugins.OTModuleColorFilter.OTModuleColorFilter'.OTModuleColorFilter.__init__
+core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.__init__
+core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.__init__
+core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.__init__
+core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleGeometry.OTModuleGeometry'.OTModuleGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTModuleMaskFromGeometry'.OTModuleMaskFromGeometry.__init__
+core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.__init__
+core.plugins.OTModuleResultsPlugin.OTModuleResultsPlugin'.OTModuleResultsPlugin.__init__
+core.plugins.OTModuleSubBackground.OTModuleSubBackground'.OTModuleSubBackground.__init__
+core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur.__init__
+core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter.__init__
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs.__init__
+core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground.__init__
+core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.__init__
+core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo.__init__
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.__init__
+core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.__init__
+core.utils.tools.RingBuffer.__init__" class="py-name" href="#" onclick="return doclink('link-7', '__init__', 'link-7');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-op">**</tt><tt class="py-name">kwargs</tt><tt class="py-op">)</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs._param_min_area
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs._param_min_area
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs._param_min_area" class="py-name" href="#" onclick="return doclink('link-8', '_param_min_area', 'link-4');">_param_min_area</a></tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs._param_max_area
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs._param_max_area
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs._param_max_area" class="py-name" href="#" onclick="return doclink('link-9', '_param_max_area', 'link-5');">_param_max_area</a></tt> <tt class="py-op">=</tt> <tt class="py-number">1000</tt> </tt>
+</div><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"> </tt>
+<a name="OTPFindBlobs.process"></a><div id="OTPFindBlobs.process-def"><a name="L25"></a><tt class="py-lineno">25</tt> <a class="py-toggle" href="#" id="OTPFindBlobs.process-toggle" onclick="return toggle('OTPFindBlobs.process');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs-class.html#process">process</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">frame</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="OTPFindBlobs.process-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="OTPFindBlobs.process-expanded"><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">        <tt class="py-name">frame</tt> <tt class="py-op">=</tt> <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-10" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPFindBlobs
+core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs
+core.plugins.OTModuleColorFilter.OTPFindBlobs
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs
+core.plugins.OTModuleSubBackground.OTPFindBlobs
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs" class="py-name" href="#" onclick="return doclink('link-10', 'OTPFindBlobs', 'link-6');">OTPFindBlobs</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method core.controllers.OTPBase.OTPBase.process()=core.controllers.OTPBase.OTPBase-class.html#process,Method core.modules.base.OTCBase.OTCBase.process()=core.modules.base.OTCBase.OTCBase-class.html#process,Method core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector.process()=core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector-class.html#process,Method core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.process()=core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector-class.html#process,Method core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.process()=core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground-class.html#process,Method core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.process()=core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur-class.html#process,Method core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.process()=core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter-class.html#process,Method core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.process()=core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs-class.html#process,Method core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.process()=core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground-class.html#process,Method core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.process()=core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#process,Method core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.process()=core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs-class.html#process,Method core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.process()=core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage-class.html#process,Method core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.process()=core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold-class.html#process,Method core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.process()=core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur-class.html#process,Method core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.process()=core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny-class.html#process,Method core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.process()=core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter-class.html#process,Method core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.process()=core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs-class.html#process,Method core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.process()=core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage-class.html#process,Method core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.process()=core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground-class.html#process,Method core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.process()=core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#process,Method core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry.process()=core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry-class.html#process,Method core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.process()=core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry-class.html#process,Method core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur.process()=core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur-class.html#process,Method core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter.process()=core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter-class.html#process,Method core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs.process()=core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs-class.html#process,Method core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground.process()=core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground-class.html#process,Method core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.process()=core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs-class.html#process,Method core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo.process()=core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo-class.html#process,Method core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.process()=core.plugins.OTModuleVideoInput.OTModuleVideoInput%27.OTModuleVideoInput-class.html#process,Method core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.process()=core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo-class.html#process"><a title="core.controllers.OTPBase.OTPBase.process
+core.modules.base.OTCBase.OTCBase.process
+core.plugins.OTModuleBackgroundCalc.BackGroundDetector.BackGroundDetector.process
+core.plugins.OTModuleBackgroundCalc.OTPBackGroundDetector.OTPBackGroundDetector.process
+core.plugins.OTModuleBackgroundCalc.OTPRemoveBackground.OTPRemoveBackground.process
+core.plugins.OTModuleBlobsFilter.OTPBlur.OTPBlur.process
+core.plugins.OTModuleBlobsFilter.OTPColorFilter.OTPColorFilter.process
+core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs.process
+core.plugins.OTModuleBlobsFilter.OTPRemoveBackground.OTPRemoveBackground.process
+core.plugins.OTModuleBlobsFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.process
+core.plugins.OTModuleBlobsFilter.OTPThreshBlobs.OTPThreshBlobs.process
+core.plugins.OTModuleBlobsFilter.OTPThreshImage.OTPThreshImage.process
+core.plugins.OTModuleColorFilter.OTPAdaptativeThreshold.OTPAdaptativeThreshold.process
+core.plugins.OTModuleColorFilter.OTPBlur.OTPBlur.process
+core.plugins.OTModuleColorFilter.OTPCanny.OTPCanny.process
+core.plugins.OTModuleColorFilter.OTPColorFilter.OTPColorFilter.process
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs.process
+core.plugins.OTModuleColorFilter.OTPMaskImage.OTPMaskImage.process
+core.plugins.OTModuleColorFilter.OTPRemoveBackground.OTPRemoveBackground.process
+core.plugins.OTModuleColorFilter.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.process
+core.plugins.OTModuleMaskFromGeometry.OTCMaskFromGeometry.OTCMaskFromGeometry.process
+core.plugins.OTModuleMaskFromGeometry.OTPMaskFromGeometry.OTPMaskFromGeometry.process
+core.plugins.OTModuleSubBackground.OTPBlur.OTPBlur.process
+core.plugins.OTModuleSubBackground.OTPColorFilter.OTPColorFilter.process
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs.process
+core.plugins.OTModuleSubBackground.OTPRemoveBackground.OTPRemoveBackground.process
+core.plugins.OTModuleSubBackground.OTPSelectBiggerBlobs.OTPSelectBiggerBlobs.process
+core.plugins.OTModuleVideoInput.OTCOpenVideo.OTCOpenVideo.process
+core.plugins.OTModuleVideoInput.OTModuleVideoInput'.OTModuleVideoInput.process
+core.plugins.OTModuleVideoInput.OTPOpenVideo.OTPOpenVideo.process" class="py-name" href="#" onclick="return doclink('link-11', 'process', 'link-11');">process</a></tt><tt class="py-op">(</tt><tt class="py-name">frame</tt><tt class="py-op">)</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">        <tt class="py-name">contours</tt><tt class="py-op">,</tt> <tt class="py-name">hierarchy</tt> <tt class="py-op">=</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">findContours</tt><tt class="py-op">(</tt><tt class="py-name">frame</tt><tt class="py-op">.</tt><tt class="py-name">copy</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">cv</tt><tt class="py-op">.</tt><tt class="py-name">CV_RETR_EXTERNAL</tt><tt class="py-op">,</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">CHAIN_APPROX_SIMPLE</tt><tt class="py-op">)</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">         </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">        <tt class="py-name">objectsFound</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">cnt</tt> <tt class="py-keyword">in</tt> <tt class="py-name">contours</tt><tt class="py-op">:</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">            <tt class="py-name">m</tt> <tt class="py-op">=</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">moments</tt><tt class="py-op">(</tt><tt class="py-name">cnt</tt><tt class="py-op">)</tt><tt class="py-op">;</tt> <tt class="py-name">m00</tt> <tt class="py-op">=</tt> <tt class="py-name">m</tt><tt class="py-op">[</tt><tt class="py-string">'m00'</tt><tt class="py-op">]</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">             </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">m00</tt> <tt class="py-op">&gt;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs._param_min_area
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs._param_min_area
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs._param_min_area" class="py-name" href="#" onclick="return doclink('link-12', '_param_min_area', 'link-4');">_param_min_area</a></tt> <tt class="py-keyword">and</tt> <tt class="py-name">m00</tt> <tt class="py-op">&lt;</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name"><a title="core.plugins.OTModuleBlobsFilter.OTPFindBlobs.OTPFindBlobs._param_max_area
+core.plugins.OTModuleColorFilter.OTPFindBlobs.OTPFindBlobs._param_max_area
+core.plugins.OTModuleSubBackground.OTPFindBlobs.OTPFindBlobs._param_max_area" class="py-name" href="#" onclick="return doclink('link-13', '_param_max_area', 'link-5');">_param_max_area</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt class="py-name">m00</tt><tt class="py-op">!=</tt><tt class="py-number">0</tt><tt class="py-op">:</tt> <tt class="py-name">centroid</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">round</tt><tt class="py-op">(</tt><tt class="py-name">m</tt><tt class="py-op">[</tt><tt class="py-string">'m10'</tt><tt class="py-op">]</tt><tt class="py-op">/</tt><tt class="py-name">m00</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt class="py-name">round</tt><tt class="py-op">(</tt><tt class="py-name">m</tt><tt class="py-op">[</tt><tt class="py-string">'m01'</tt><tt class="py-op">]</tt><tt class="py-op">/</tt><tt class="py-name">m00</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> <tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">                <tt class="py-keyword">else</tt><tt class="py-op">:</tt> <tt class="py-name">centroid</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line"> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">                <tt class="py-name">box</tt> <tt class="py-op">=</tt> <tt class="py-name">cv2</tt><tt class="py-op">.</tt><tt class="py-name">boundingRect</tt><tt class="py-op">(</tt><tt class="py-name">cnt</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">                <tt class="py-name">p1</tt><tt class="py-op">,</tt> <tt class="py-name">p2</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">box</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">box</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-op">(</tt><tt class="py-name">box</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">+</tt><tt class="py-name">box</tt><tt class="py-op">[</tt><tt class="py-number">2</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">box</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">+</tt><tt class="py-name">box</tt><tt class="py-op">[</tt><tt class="py-number">3</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">         </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">                <tt class="py-name">obj</tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name" targets="Class core.plugins.OTModuleBlobsFilter.OTPFindBlobs.Blob=core.plugins.OTModuleBlobsFilter.OTPFindBlobs.Blob-class.html,Class core.plugins.OTModuleColorFilter.OTPFindBlobs.Blob=core.plugins.OTModuleColorFilter.OTPFindBlobs.Blob-class.html,Class core.plugins.OTModuleSubBackground.OTPFindBlobs.Blob=core.plugins.OTModuleSubBackground.OTPFindBlobs.Blob-class.html"><a title="core.plugins.OTModuleBlobsFilter.OTPFindBlobs.Blob
+core.plugins.OTModuleColorFilter.OTPFindBlobs.Blob
+core.plugins.OTModuleSubBackground.OTPFindBlobs.Blob" class="py-name" href="#" onclick="return doclink('link-14', 'Blob', 'link-14');">Blob</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">                <tt class="py-name">obj</tt><tt class="py-op">.</tt><tt class="py-name">_contour</tt> <tt class="py-op">=</tt> <tt class="py-name">cnt</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">                <tt class="py-name">obj</tt><tt class="py-op">.</tt><tt class="py-name">_bounding</tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-name">p1</tt><tt class="py-op">,</tt> <tt class="py-name">p2</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">                <tt class="py-name">obj</tt><tt class="py-op">.</tt><tt class="py-name">_area</tt> <tt class="py-op">=</tt> <tt class="py-name">m00</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">                <tt class="py-name">obj</tt><tt class="py-op">.</tt><tt class="py-name">_centroid</tt> <tt class="py-op">=</tt> <tt class="py-name">centroid</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">                 </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">                <tt class="py-name">objectsFound</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Method core.utils.tools.RingBuffer.append()=core.utils.tools.RingBuffer-class.html#append"><a title="core.utils.tools.RingBuffer.append" class="py-name" href="#" onclick="return doclink('link-15', 'append', 'link-15');">append</a></tt><tt class="py-op">(</tt> <tt class="py-name">obj</tt> <tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line"> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">objectsFound</tt> </tt>
+</div></div><a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="core-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >OpenTracker</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Jan  8 12:26:16 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
