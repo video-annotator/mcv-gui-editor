@@ -21,8 +21,8 @@ class OTModuleColorRangeFilter(OTModulePlugin,TypeSingleChannelImage):
         self._video     = ModuleConnection("Video", connecting=TypeBWVideoPipe)
         self._player    = ControlPlayer("Video player")
 
-        self._min = ControlSlider("Min", 1, 0, 255)
-        self._max = ControlSlider("Max", 255, 0, 255)
+        self._min = ControlSlider("Min", default=1, minimum=0, maximum=255)
+        self._max = ControlSlider("Max", default=255, minimum=0, maximum=255)
         
         self._formset = [ 
                 '_video',
