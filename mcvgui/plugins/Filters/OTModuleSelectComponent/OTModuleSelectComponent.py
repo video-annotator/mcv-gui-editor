@@ -7,9 +7,9 @@ from datatypes.TypeBWVideoPipe  		import TypeBWVideoPipe
 from datatypes.TypeColorVideo 				import TypeColorVideo
 
 
-from pyforms.Controls 	import ControlPlayer
-from pyforms.Controls  	import ControlCombo
-from pyforms.Controls  	import ControlButton
+from pyforms.controls 	import ControlPlayer
+from pyforms.controls  	import ControlCombo
+from pyforms.controls  	import ControlButton
 
 
 class OTModuleSelectComponent(OTModulePlugin,TypeBWVideoPipe):

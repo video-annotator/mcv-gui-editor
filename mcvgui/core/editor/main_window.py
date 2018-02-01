@@ -9,11 +9,11 @@ from mcvgui.core.editor.viewers.viewer_workflow_widget 		import ViewerWorkFlowWi
 from mcvgui.core.editor.plugins_tree 						import PluginsTree
 
 from pyforms 			import BaseWidget
-from pyforms.Controls 	import ControlDockWidget
-from pyforms.Controls 	import ControlTree
-from pyforms.Controls 	import ControlOpenGL
-from pyforms.Controls 	import ControlMdiArea
-from pyforms.Controls 	import ControlEmptyWidget
+from pyforms.controls 	import ControlDockWidget
+from pyforms.controls 	import ControlTree
+from pyforms.controls 	import ControlOpenGL
+from pyforms.controls 	import ControlMdiArea
+from pyforms.controls 	import ControlEmptyWidget
 
 class MainWindow(BaseWidget):
 	"""

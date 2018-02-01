@@ -8,9 +8,9 @@ from PyQt4.QtGui import *
 
 import cv2, os
 
-from pyforms.Controls import ControlFile
-from pyforms.Controls import ControlPlayer
-from pyforms.Controls import ControlProgress
+from pyforms.controls import ControlFile
+from pyforms.controls import ControlPlayer
+from pyforms.controls import ControlProgress
 
 class OTModuleVideoInput(OTModulePlugin, TypeColorVideo):
 

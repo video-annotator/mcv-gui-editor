@@ -1,6 +1,6 @@
 from mcvgui.core.editor.viewers.base_viewer import BaseViewer
 from PyQt4 import QtCore, QtGui
-from pyforms.Controls import ControlTree
+from pyforms.controls import ControlTree
 
 class ViewerModulesListWidget(ControlTree, BaseViewer):
 	"""

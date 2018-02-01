@@ -1,8 +1,8 @@
 import mcvgui.core.utils.tools as tools, cv2
 
-from pyforms.Controls   import ControlPlayer
-from pyforms.Controls   import ControlCombo
-from pyforms.Controls   import ControlSlider
+from pyforms.controls   import ControlPlayer
+from pyforms.controls   import ControlCombo
+from pyforms.controls   import ControlSlider
 
 from mcvgui.core.modules.ModuleConnection  import ModuleConnection
 from datatypes.TypeSingleChannelImage        import TypeSingleChannelImage

@@ -1,5 +1,5 @@
-from pyforms.Controls import ControlTreeView
-from pyforms.Controls import ControlTree
+from pyforms.controls import ControlTreeView
+from pyforms.controls import ControlTree
 from PyQt4 import QtGui
 from PyQt4.QtCore import QSize
 import os, glob

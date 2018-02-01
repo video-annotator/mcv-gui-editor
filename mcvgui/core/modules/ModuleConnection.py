@@ -1,4 +1,4 @@
-from pyforms.Controls import ControlCombo
+from pyforms.controls import ControlCombo
 from pyforms.gui.Controls.ControlBase import ControlBase
 from PyQt4 import QtGui, QtCore
 
