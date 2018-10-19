@@ -8,7 +8,7 @@ from mcvgui.core.editor.viewers.viewer_modules_list_widget 	import ViewerModules
 from mcvgui.core.editor.viewers.viewer_workflow_widget 		import ViewerWorkFlowWidget
 from mcvgui.core.editor.plugins_tree 						import PluginsTree
 
-from pyforms 			import BaseWidget
+from pyforms.basewidget import BaseWidget
 from pyforms.controls 	import ControlDockWidget
 from pyforms.controls 	import ControlTree
 from pyforms.controls 	import ControlOpenGL

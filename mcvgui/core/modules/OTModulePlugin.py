@@ -3,7 +3,7 @@ from mcvgui.core.modules.OTModuleWorkFlowItem import OTModuleWorkFlowItem
 from mcvgui.core.modules.ModuleConnection import ModuleConnection
 from PyQt4 import QtGui
 #This class is a module that indicate that the input is of video type
-from pyforms import BaseWidget
+from pyforms.basewidget import BaseWidget
 
 class OTModulePlugin(BaseWidget, OTModuleWorkFlowItem):
 	"""

@@ -1,5 +1,5 @@
 from mcvgui.core.modules.OTModule import OTModule
-from pyforms import BaseWidget
+from pyforms.basewidget import BaseWidget
 from PyQt4 import QtGui
 from PyQt4 import QtCore
 
