@@ -432,7 +432,7 @@ class OTModuleAdjustPositions(OTModuleResultsPlugin, OTModulePositions):
         #Draw the current mouse selected row
         if self._current_row != None  and self._showPos.value: frame = self.drawRow( frame, self._current_row, (0,0,255) )
             
-        if self._player.isPlaying(): self.drawCurrentPositionWhenIsPlaying(frame)
+        if self._player.is_playing(): self.drawCurrentPositionWhenIsPlaying(frame)
 
         return frame
 

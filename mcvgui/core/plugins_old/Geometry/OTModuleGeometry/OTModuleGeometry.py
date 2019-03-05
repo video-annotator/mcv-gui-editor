@@ -169,7 +169,7 @@ class OTModuleGeometry(OTBaseModuleGeometry):
                 self._polygons.setValue( 1, self._selectedPoly, points )
             except: pass
 
-        if not self._player.isPlaying(): self._player.refresh() 
+        if not self._player.is_playing(): self._player.refresh()
             
     def onEndDragInVideoWindow(self, startPoint, endPoint):
         self._startPoint = ( int(startPoint[0] * self._imgWidth), int(startPoint[1] * self._imgWidth) )
