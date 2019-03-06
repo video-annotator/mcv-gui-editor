@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name='mcv-gui',
-	version=0.0,
+	version=0.1,
 	author=['Ricardo Ribeiro'],
 	author_email='ricardojvr@gmail.com',
 	license='Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>',
